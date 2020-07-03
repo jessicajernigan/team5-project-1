@@ -23,6 +23,7 @@
 
 body {
     background-color: var(--background);
+    
 }
 
 header {
@@ -55,11 +56,15 @@ footer h2 {
     color: var(--text);
     margin: 0;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    float: left;
+    margin-left: -35px;
+    padding-right: 30px;
 }
 
 footer a {
     text-decoration: none;
     color: var(--box);
+    float: right;
 }
 
 footer nav {
@@ -86,6 +91,7 @@ footer nav ul li a {
     border: var(--background);
     border: 2px;
     border-style: dotted;
+    ;
 }
 
 footer nav ul li a:hover {
@@ -113,6 +119,7 @@ footer nav ul li a:hover {
     flex-wrap: wrap;
     align-items: flex-start;
     background-attachment: fixed;
+    padding-bottom: 105px;
 }
 
 .column-container {
