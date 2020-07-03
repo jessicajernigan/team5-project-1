@@ -1,0 +1,10 @@
+:root{
+    --text:#FFFF00;
+    --box:#FF007F;
+    --background:#00ccff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
