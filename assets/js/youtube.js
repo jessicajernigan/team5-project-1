@@ -1,6 +1,6 @@
 // FUNCTIONS TO EMBED A YOUTUBE VIDEO - NEEDS TO BE LINKED TO THE SEARCH TERM
 var drinkInput = document.getElementById('drink-search');
-var drinkForm = document.querySelector("form.entry");
+var drinkForm = document.querySelector(".entry");
 var drinkSearch = drinkInput.value;
 var videoContainer = document.getElementById("youtube");
 
@@ -12,6 +12,7 @@ function pushDrink(e) {
 
 // Function that takes in drink search and gets YouTube video
 function getVideo() {
+    $(videoContainer).empty()
     var drinkSearch = drinkInput.value;
     // console.log(drinkSearch);
     $.ajax({
