@@ -15,7 +15,7 @@
 
 :root {
     --text: #FFFF00;
-    --box: #FF007F;
+    --box: rgba(255, 0, 127, .5);
     --background: #00ccff;
 }
 
@@ -145,15 +145,18 @@ footer nav ul li a:hover {
 
 .dropbtn {
     background-color: var(--text);
-    color: var(--box);
+    opacity: .5;
     padding: 16px;
-    font-size: 16px;
+    
     border: none;
+    
+    
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
+    
   }
   
   /* Dropdown Content (Hidden by Default) */
