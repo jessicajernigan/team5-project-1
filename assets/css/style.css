@@ -1,27 +1,137 @@
-:root{
-    --text:#FFFF00;
-    --box:#FF007F;
-    --background:#00ccff;
-}
+@import url("foundation.css");
+@import url("foundation-float.css");
+@import url("foundation-prototype.css");
+@import url("foundation-rtl.css");
+/* Imported style sheets MUST be the first item listed. */
+
+/* Reset styles. */
 
 * {
     margin: 0;
     padding: 0;
 }
 
+/* Set variables. */
+
+:root {
+    --text: #FFFF00;
+    --box: #FF007F;
+    --background: #00ccff;
+}
+
+/* General page element styles. */
+
 body {
     background-color: var(--background);
 }
 
-.hero-title {
+header {
     background-color: var(--box);
     color: var(--text);
+}
+
+main {
+    color: var(--text);
+}
+
+/* Footer Styles */
+
+footer {
+    color: var(--text);
+    background-color: var(--box);
+}
+
+footer nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+footer h2 {
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--text);
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--box);
+}
+
+footer nav {
+    margin: 7px 0;
+}
+
+footer nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+footer nav ul li a {
+    padding: 5px 10px;
+    font-weight: lighter;
+    font-size: 1vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: var(--text);
+    color: var(--box);
+    border-radius: 15px;
+    text-shadow: none;
+    border: var(--background);
+    border: 2px;
+    border-style: dotted;
+}
+
+footer nav ul li a:hover {
+    font-weight: bolder;
+    color: var(--box);
+}
+
+/* Begin Custom Classes */
+
+.hero-title {
     text-align: center;
+    margin-bottom: 0rem;
 }
 
 .hero {
-    backdrop-filter: saturate(180%) blur(1rem);
+    /* backdrop-filter: saturate(180%) blur(1rem);
     height: auto;
-    margin-top: -7.8px;
+    width: 100%;
+    margin-top: -7.8px; */
+    background-image: url("../images/bg_recipes.jpg");
+    background-size: cover;
+    background-position: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-attachment: fixed;
 }
 
+.column-container {
+    background-color: var(--box);
+    /* backdrop-filter: saturate(180%) blur(1rem); */
+    margin: 15px;
+    padding: 15px;
+}
+
+/* Text input styles */
+
+.notes-field {
+    border-radius: 15px;
+    height: 100px;
+    width: 100%;
+}
+
+/* Button Styles */
+
+.random-btn {
+    color: var(--text);
+}
