@@ -13,7 +13,7 @@ var directions = document.getElementById("directions") //This will need to be mo
 // https://www.thecocktaildb.com/api/json/v1/1/search.php?s=  + "var drink"
 
 $(document).ready(function() {
-    fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
+    fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita") // + var searchtext
         .then(function(response) {
             return response.json();
         })
