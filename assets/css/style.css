@@ -91,7 +91,6 @@ footer nav ul li a {
     border: var(--background);
     border: 2px;
     border-style: dotted;
-    ;
 }
 
 footer nav ul li a:hover {
@@ -139,21 +138,41 @@ footer nav ul li a:hover {
 
 /* Button Styles */
 
-.random-btn {
-    color: var(--text);
+.btn {
+    padding: 5px 5px;
+    font-weight: lighter;
+    font-size: 1vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: var(--text);
+    color: var(--box);
+    border-radius: 15px;
+    text-shadow: none;
+    border: var(--background);
+    border: 2px;
+    border-style: dotted;
 }
 
-.dropbtn {
+.btn:hover {
+    font-weight: bolder;
+    color: var(--box);
+}
+
+#random-btn {
     background-color: var(--text);
     padding: 16px;
     border: none;
 }
 
-.dropdown {
+#drop-btn {
+    background-color: var(--text);
+    padding: 16px;
+    border: none;
+}
+
+#dropdown {
     position: relative;
     display: inline-block;
-    
-  }
+}
   
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
