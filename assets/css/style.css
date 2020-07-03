@@ -22,7 +22,7 @@
 /* General page element styles. */
 
 body {
-    
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 
@@ -40,7 +40,8 @@ main {
 footer {
     color: var(--text);
     background-color: var(--box);
-    margin-top: 85px;
+    margin-top: 127px;
+    
 }
 
 footer nav ul {
@@ -83,7 +84,7 @@ footer nav ul {
 footer nav ul li a {
     padding: 5px 10px;
     font-weight: lighter;
-    font-size: 1vw;
+    font-size: 16px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background: var(--text);
     color: var(--box);
@@ -164,10 +165,7 @@ footer nav ul li a:hover {
 #dropdown {
     position: relative;
     display: inline-block;
-<<<<<<< HEAD
     
-=======
->>>>>>> 2d29709b96cb516430aef1e20f0cc2356d73fa47
 }
   
   /* Dropdown Content (Hidden by Default) */
