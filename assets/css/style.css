@@ -100,7 +100,7 @@ footer nav ul li a:hover {
     color: var(--box);
 }
 
-/* Begin Custom Classes */
+/* Begin Custom Styles */
 
 .hero-title {
     text-align: center;
@@ -108,10 +108,8 @@ footer nav ul li a:hover {
 }
 
 .hero-img {
-    
     background-image: url("../images/bg_recipes.jpg");
     background-size: cover;
-    
 }
 
 .column-container {
@@ -121,8 +119,13 @@ footer nav ul li a:hover {
     padding: 15px;
 }
 
-/* Text input styles */
+#youtube {
+    display: none;
+}
 
+
+
+/* Text input styles */
 .notes-field {
     border-radius: 15px;
     height: 100px;

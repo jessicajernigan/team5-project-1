@@ -12,6 +12,7 @@ function pushDrink(e) {
 
 // Function that takes in drink search and gets YouTube video
 function getVideo() {
+    videoContainer.style.display = "none";
     $(videoContainer).empty()
     var drinkSearch = drinkInput.value;
     // console.log(drinkSearch);
@@ -46,6 +47,7 @@ function embedVideo(data) {
     video.setAttribute('width', '210');
     video.setAttribute('height', '210');
     video.src = 'https://www.youtube.com/embed/' + data.items[0].id.videoId
+    videoContainer.style.display = "inline-block";
     videoContainer.appendChild(videoTitle);
     videoContainer.appendChild(video);
     // $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId)
