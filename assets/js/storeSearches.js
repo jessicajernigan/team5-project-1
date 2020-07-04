@@ -5,7 +5,7 @@ var drinksArray = JSON.parse(localStorage.getItem("drinks")) || [];
 
 
 
-function storeSearch(event) {
+function storeDrinkSearches(event) {
   event.preventDefault();
 
   var searchTerm = searchInput.value.trim();
@@ -15,31 +15,44 @@ function storeSearch(event) {
     drinkDisplayed.innerHTML = searchTerm;
     localStorage.setItem("drinks", JSON.stringify(drinksArray));
     console.log(drinksArray);
-    console.log(searchInput.value)
 
+    var previousSearches = document.getElementById('previous-searches');
+    var newBtn = document.createElement("button");
+    newBtn.setAttribute("value", searchTerm);
+
+    newBtn.onclick = function(event) {
+      var drink = $(this).attr("value");
+      console.log(drink);
+    }
+
+    previousSearches.appendChild(newBtn);
+    newBtn.classList = "recent-search-terms";
+    newBtn.innerHTML = searchTerm;
+
+    console.log(searchInput.value);
     searchInput.value = "";
 
-
-    
   }
 }
 
-  //   var previousSearches = document.getElementById('previous-searches'); // Identifies the container for the "city buttons" as a variable.
-  //   var newBtn = document.createElement("button");
-  //   newBtn.setAttribute("value", currentCity);
-    
-  //   newBtn.onclick = function (event) {
-  //     var city = $(this).attr("value"); // After setting the attribute, use jQuery to target said attribute. 
-  //     console.log(city);
-  //     displayCurrentWeather(city);
-  //   }
-  //   previousSearches.appendChild(newBtn);
-  //   newBtn.classList = "btn btn-outline-primary btn-lg btn-block city-btn";
-  //   newBtn.setAttribute("id", "city-" + currentCity)
-  //   newBtn.innerHTML = currentCity;
-  // }
-  // cityInputField.value = "";
+
+function displayStoredDrinks() {
+  for (var i = 0; i < drinksArray.length; i++) {
+    var previousSearches = document.getElementById('previous-searches'); 
+    var newBtn = document.createElement("button");
+
+    newBtn.onclick = function (event) {
+      var drink = event.target.textContent;
+      console.log(drink);
+    }
+    previousSearches.appendChild(newBtn);
+    newBtn.classList = "recent-search-terms";
+    newBtn.innerHTML = drinksArray[i];
+  }
+}
+
 
 
 // Event Listener
-drinkForm.addEventListener('submit', storeSearch);
+drinkForm.addEventListener('submit', storeDrinkSearches);
+displayStoredDrinks();
