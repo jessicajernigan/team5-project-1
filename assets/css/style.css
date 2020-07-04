@@ -44,6 +44,8 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
 }
 
 footer h2 {
@@ -61,6 +63,7 @@ footer a {
 
 footer div {
     display: flex;
+    flex: auto;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
