@@ -1,5 +1,5 @@
 // ID Search box
-var searchInput = document.getElementById("searchtext") //This will need to be modified to match html page
+var searchInput = document.getElementById("drink-search") //This will need to be modified to match html page
     // ID Ingredients
 var ingredients = document.getElementById("ingredients") //This will need to be modified to match html page
     // ID Trivia
@@ -13,7 +13,7 @@ var directions = document.getElementById("directions") //This will need to be mo
 // https://www.thecocktaildb.com/api/json/v1/1/search.php?s=  + "var drink"
 
 $(document).ready(function() {
-    fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita") // + var searchtext
+    fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
         .then(function(response) {
             return response.json();
         })
