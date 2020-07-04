@@ -132,14 +132,12 @@ footer nav ul li a:hover {
     display: none;
 }
 
-
-
-/* Text input styles */
-.notes-field {
-    border-radius: 15px;
-    height: 100px;
-    width: 100%;
+.search-icon {
+    font-size: 1.3em;
+    min-height: 25px;
 }
+
+
 
 /* Button Styles */
 
@@ -150,7 +148,7 @@ footer nav ul li a:hover {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background: var(--text);
     color: var(--box);
-    border-radius: 15px;
+    /* border-radius: 15px; */
     text-shadow: none;
     border: var(--background);
     border: 2px;
