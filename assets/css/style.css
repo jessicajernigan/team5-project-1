@@ -132,9 +132,10 @@ footer nav ul li a:hover {
     display: none;
 }
 
-.search-icon {
+.drink-icon {
     font-size: 1.3em;
     min-height: 25px;
+    padding: 1px;;
 }
 
 
