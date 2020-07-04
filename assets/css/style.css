@@ -12,19 +12,18 @@
 }
 
 /* Set variables. */
-
 :root {
     --text: #ffff3d;
     --box: rgba(255, 0, 127, .5);
     --background: #00ccff;
 }
 
+
 /* General page element styles. */
-
-
 html, body {
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
+    margin: 0;
 }
 
 header {
@@ -46,8 +45,6 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
-
 
 footer h2 {
     font-weight: bold;
@@ -87,8 +84,9 @@ footer div a:hover {
     color: var(--box);
 }
 
-/* Begin Custom Styles */
 
+
+/* Begin Custom Styles */
 .hero-title {
     text-align: center;
     margin-bottom: 0rem;
@@ -121,7 +119,14 @@ footer div a:hover {
     padding: 1px;;
 }
 
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
 
+.push {
+    height: 50px;
+}
 
 /* Button Styles */
 
