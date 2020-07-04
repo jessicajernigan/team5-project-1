@@ -41,30 +41,19 @@ main {
 footer {
     color: var(--text);
     background-color: var(--box);
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-footer nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-}
+
 
 footer h2 {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5em;
     color: var(--text);
-    margin: 0;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     float: left;
-    margin-left: -35px;
-    padding-right: 30px;
 }
 
 footer a {
@@ -73,21 +62,15 @@ footer a {
     float: right;
 }
 
-footer nav {
-    margin: 7px 0;
-}
-
-footer nav ul {
+footer div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    list-style: none;
 }
 
-footer nav ul li a {
+footer div a {
     padding: 5px 10px;
-    font-weight: lighter;
     font-size: 16px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background: var(--text);
@@ -99,7 +82,7 @@ footer nav ul li a {
     border-style: dotted;
 }
 
-footer nav ul li a:hover {
+footer div a:hover {
     font-weight: bolder;
     color: var(--box);
 }
@@ -144,12 +127,10 @@ footer nav ul li a:hover {
 
 .btn {
     padding: 5px 5px;
-    font-weight: lighter;
     font-size: 18px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background: var(--text);
     color: var(--box);
-    /* border-radius: 15px; */
     text-shadow: none;
     border: var(--background);
     border: 2px;
