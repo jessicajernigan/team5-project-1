@@ -18,6 +18,9 @@ function storeSearch(event) {
     console.log(searchInput.value)
 
     searchInput.value = "";
+
+
+    
   }
 }
 
