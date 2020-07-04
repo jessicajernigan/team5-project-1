@@ -157,6 +157,11 @@ footer div a:hover {
     border-style: dotted;
 }
 
+.search-btn:hover {
+    text-shadow: 0 0 3px var(--box);
+    cursor: pointer;
+}
+
 .recent-search-terms {
     padding: 10px 10px;
     margin: 5px;

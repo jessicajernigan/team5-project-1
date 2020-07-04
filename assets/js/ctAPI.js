@@ -1,24 +1,26 @@
 // ID Search box
-var searchInput = document.getElementById("drink-search") //This will need to be modified to match html page
+var searchInput = document.getElementById("drink-search").value //This will need to be modified to match html page
     // ID Ingredients
 var ingredients = document.getElementById("ingredients") //This will need to be modified to match html page
     // ID Trivia
-    // var trivia = document.getElementById("trivia") //This will need to be modified to match html page
+var trivia = document.getElementById("trivia") //This will need to be modified to match html page
     // ID Drink Pic
 var drinkPic = document.getElementById("drinkPic") //This will need to be modified to match html page
     // ID Directions
 var directions = document.getElementById("directions") //This will need to be modified to match html page
 
 
-// https://www.thecocktaildb.com/api/json/v1/1/search.php?s=  + "var drink"
-
 $(document).ready(function() {
-    fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
+
+    var drinkDisplayed = searchInput.value
+    console.log(drinkDisplayed);
+
+    fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkDisplayed)
         .then(function(response) {
             return response.json();
         })
         .then(function(data) {
-            console.log(data)
+            // console.log(data)
             directions.innerHTML = data.drinks[0].strInstructions
             drinkPic.src = data.drinks[0].strDrinkThumb
             var ingredientsMap = [],
@@ -26,7 +28,7 @@ $(document).ready(function() {
                 finalIngredients = {}
 
             Object.entries(data.drinks[0]).forEach(([key, val]) => {
-                console.log(val)
+                // console.log(val)
                 if (val) {
                     if (key.startsWith("strIng")) ingredientsMap.push(val)
                     else if (key.startsWith("strMea")) measureMap.push(val)

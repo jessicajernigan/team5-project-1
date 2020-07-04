@@ -16,26 +16,27 @@ function getVideo() {
     $(videoContainer).empty()
     var drinkSearch = drinkInput.value;
     // console.log(drinkSearch);
-    $.ajax({
-      type: 'GET',
-      url: 'https://www.googleapis.com/youtube/v3/search',
-      data: {
-          key: 'AIzaSyBzgwBGOijygJTj2Httg3gan4_e-w5NjWs',
-          q: "how to make the best " + drinkSearch + " cocktail",
-          part: 'snippet',
-          maxResults: 1,
-          type: 'video',
-          videoEmbeddable: true,
-          allowFullScreen: true,
-      },
-      success: function(data){
-          embedVideo(data)
-        //   console.log(data);
-      },
-      error: function(response){
-          console.log("Request Failed");
-      }
-    });
+    console.log("This would have populated a " + drinkSearch + " video!")
+    // $.ajax({
+    //   type: 'GET',
+    //   url: 'https://www.googleapis.com/youtube/v3/search',
+    //   data: {
+    //       key: 'AIzaSyBzgwBGOijygJTj2Httg3gan4_e-w5NjWs',
+    //       q: "how to make the best " + drinkSearch + " cocktail",
+    //       part: 'snippet',
+    //       maxResults: 1,
+    //       type: 'video',
+    //       videoEmbeddable: true,
+    //       allowFullScreen: true,
+    //   },
+    //   success: function(data){
+    //       embedVideo(data)
+    //     //   console.log(data);
+    //   },
+    //   error: function(response){
+    //       console.log("Request Failed");
+    //   }
+    // });
   }
 
 // Function that embeds YouTube video
