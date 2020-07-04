@@ -134,7 +134,7 @@ footer nav ul li a:hover {
 .btn {
     padding: 5px 5px;
     font-weight: lighter;
-    font-size: 1vw;
+    font-size: 18px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background: var(--text);
     color: var(--box);
