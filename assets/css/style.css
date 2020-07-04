@@ -21,9 +21,10 @@
 
 /* General page element styles. */
 
-body {
+
+html, body {
     font-family: Arial, Helvetica, sans-serif;
-    
+    height: 100%;
 }
 
 header {
@@ -40,8 +41,11 @@ main {
 footer {
     color: var(--text);
     background-color: var(--box);
-    margin-top: 127px;
-    
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 footer nav ul {
@@ -110,6 +114,7 @@ footer nav ul li a:hover {
 .hero-img {
     background-image: url("../images/bg_recipes.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .column-container {
