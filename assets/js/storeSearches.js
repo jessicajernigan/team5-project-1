@@ -8,7 +8,7 @@ var drinksArray = JSON.parse(localStorage.getItem("drinks")) || [];
 function storeDrinkSearches(event) {
   event.preventDefault();
 
-  var searchTerm = searchInput.value.trim();
+  var searchTerm = searchInput.value
 
   if (drinksArray.indexOf(searchTerm) === -1) {
     drinksArray.push(searchTerm);

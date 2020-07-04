@@ -21,7 +21,7 @@ function getVideo() {
       url: 'https://www.googleapis.com/youtube/v3/search',
       data: {
           key: 'AIzaSyBzgwBGOijygJTj2Httg3gan4_e-w5NjWs',
-          q: "how to make the best" + drinkSearch + "cocktail",
+          q: "how to make the best " + drinkSearch + " cocktail",
           part: 'snippet',
           maxResults: 1,
           type: 'video',
