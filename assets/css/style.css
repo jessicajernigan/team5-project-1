@@ -14,7 +14,7 @@
 /* Set variables. */
 
 :root {
-    --text: #FFFF00;
+    --text: #ffff3d;
     --box: rgba(255, 0, 127, .5);
     --background: #00ccff;
 }
@@ -122,6 +122,10 @@ footer nav ul li a:hover {
     /* backdrop-filter: saturate(180%) blur(1rem); */
     margin: 15px;
     padding: 15px;
+}
+
+.search-prompt {
+    font-size: 1.2em;
 }
 
 #youtube {
