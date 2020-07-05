@@ -122,6 +122,9 @@ footer div a:hover {
     /* backdrop-filter: saturate(180%) blur(1rem); */
     margin: 15px;
     padding: 15px;
+    border: 1px groove var(--text);
+    border-radius: 15px;
+    
 }
 
 .search-prompt {
