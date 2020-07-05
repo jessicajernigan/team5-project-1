@@ -1,5 +1,5 @@
 // ID Search box
-var searchInput = document.getElementById("drink-search").value //This will need to be modified to match html page
+var searchInput = document.getElementById("drink-search") //This will need to be modified to match html page
     // ID Ingredients
 var ingredients = document.getElementById("ingredients") //This will need to be modified to match html page
     // ID Trivia
@@ -10,8 +10,7 @@ var drinkPic = document.getElementById("drinkPic") //This will need to be modifi
 var directions = document.getElementById("directions") //This will need to be modified to match html page
 
 
-$(document).ready(function() {
-
+var populateSearchResults = function() {
     var drinkDisplayed = searchInput.value
     console.log(drinkDisplayed);
 
