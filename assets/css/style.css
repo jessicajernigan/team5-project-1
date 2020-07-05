@@ -14,7 +14,7 @@
 /* Set variables. */
 :root {
     --text: #ffff3d;
-    --box: rgba(255, 0, 127, .5);
+    --box: rgba(255, 0, 127, .40);
     --background: #00ccff;
 }
 
@@ -26,14 +26,22 @@ html, body {
     margin: 0;
 }
 
+body { 
+    opacity: 0;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s; /* Safari */
+}
+
 header {
     background-color: var(--box);
     color: var(--text);
+    border-bottom: 4px dotted var(--text);
 }
 
 main {
     color: var(--text);
 }
+
 
 /* Footer Styles */
 
@@ -87,17 +95,20 @@ footer div a:hover {
     color: var(--box);
 }
 
+
+/* Begin Custom Styles */
+.centertext {
+    text-align: center;
+}
+
 .fancy-heading {
     font-family: 'Pacifico', cursive;
 }
 
-/* Begin Custom Styles */
 .header-title {
-    text-align: center;
     margin-bottom: 0rem;
     font-family: 'Pacifico', cursive;
     font-size: 4em;
-
 }
 
 .hero-img {
@@ -193,14 +204,14 @@ footer div a:hover {
     display: block;
     width: 100%;
     cursor: pointer;
-    text-align: center;
-    /* border: none; */
 }
 
 #drop-btn {
     background-color: var(--text);
     padding: 16px;
-    /* border: none; */
+    display: block;
+    width: 100%;
+    cursor: pointer;
 }
 
 #dropdown {
