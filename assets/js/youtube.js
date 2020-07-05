@@ -15,29 +15,60 @@ function getVideo() {
     videoContainer.style.display = "none";
     $(videoContainer).empty()
     var drinkSearch = drinkInput.value;
-    // console.log(drinkSearch);
-    console.log("This would have populated a " + drinkSearch + " video!")
-    // $.ajax({
-    //   type: 'GET',
-    //   url: 'https://www.googleapis.com/youtube/v3/search',
-    //   data: {
-    //       key: 'AIzaSyBzgwBGOijygJTj2Httg3gan4_e-w5NjWs',
-    //       q: "how to make the best " + drinkSearch + " cocktail",
-    //       part: 'snippet',
-    //       maxResults: 1,
-    //       type: 'video',
-    //       videoEmbeddable: true,
-    //       allowFullScreen: true,
-    //   },
-    //   success: function(data){
-    //       embedVideo(data)
-    //     //   console.log(data);
-    //   },
-    //   error: function(response){
-    //       console.log("Request Failed");
-    //   }
-    // });
+    console.log("testing");
+    console.log(drinkSearch);
+    // console.log("This would have populated a " + drinkSearch + " video!")
+    $.ajax({
+      type: 'GET',
+      url: 'https://www.googleapis.com/youtube/v3/search',
+      data: {
+          key: 'AIzaSyBzgwBGOijygJTj2Httg3gan4_e-w5NjWs',
+          q: "how to make the best " + drinkSearch + " cocktail",
+          part: 'snippet',
+          maxResults: 1,
+          type: 'video',
+          videoEmbeddable: true,
+          allowFullScreen: true,
+      },
+      success: function(data){
+          embedVideo(data)
+        //   console.log(data);
+      },
+      error: function(response){
+          console.log("Request Failed");
+      }
+    });
   }
+
+// Function that takes in drink search BUTTON and gets YouTube video
+function getVideoBtn() {
+  videoContainer.style.display = "none";
+  $(videoContainer).empty()
+  var drink = event.target.textContent;
+  console.log("testing");
+  console.log(drink);
+  // console.log("This would have populated a " + drinkSearch + " video!")
+  $.ajax({
+    type: 'GET',
+    url: 'https://www.googleapis.com/youtube/v3/search',
+    data: {
+        key: 'AIzaSyBzgwBGOijygJTj2Httg3gan4_e-w5NjWs',
+        q: "how to make the best " + drink + " cocktail",
+        part: 'snippet',
+        maxResults: 1,
+        type: 'video',
+        videoEmbeddable: true,
+        allowFullScreen: true,
+    },
+    success: function(data){
+        embedVideo(data)
+      //   console.log(data);
+    },
+    error: function(response){
+        console.log("Request Failed");
+    }
+  });
+}
 
 // Function that embeds YouTube video
 function embedVideo(data) {
