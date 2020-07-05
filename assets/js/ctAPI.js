@@ -16,7 +16,6 @@ function fetchDrink(drink = null) {
     ingredients.textContent = "";
     console.log({drink, drinkDisplayed});
     console.trace(drink); // "Trace" shows where a variable came from.
-    console.log(searchInput.value);
     var url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + (drink || drinkDisplayed).trim().replace(" ", "_");
     console.log(url);
 

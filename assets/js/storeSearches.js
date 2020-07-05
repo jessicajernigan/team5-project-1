@@ -3,15 +3,24 @@ var drinkForm = document.querySelector(".entry");
 var drinkDisplayed = document.getElementById('cocktail-name-main');
 var drinksArray = JSON.parse(localStorage.getItem("drinks")) || [];
 
-
+// Function that forces upper case on first letter of displayed drink name - works for multiple word drinks
+function toUpper(drink) {
+  return drink
+      .toLowerCase()
+      .split(' ')
+      .map(function(word) {
+          return word[0].toUpperCase() + word.substr(1);
+      })
+      .join(' ');
+   }
 
 function storeDrinkSearches(event) {
   event.preventDefault();
   var searchTerm = searchInput.value
+  drinkDisplayed.innerHTML = toUpper(searchTerm);
 
   if (drinksArray.indexOf(searchTerm) === -1) {
     drinksArray.push(searchTerm);
-    drinkDisplayed.innerHTML = searchTerm;
     localStorage.setItem("drinks", JSON.stringify(drinksArray));
     console.log(drinksArray);
 
@@ -51,7 +60,7 @@ function displayStoredDrinks() {
     newBtn.onclick = function (event) {
       var drink = event.target.textContent;
       searchClicked(drink);
-      drinkDisplayed.innerHTML = drink;
+      drinkDisplayed.innerHTML = toUpper(drink);
       console.log("Here's the 'drink' value when I click a button that loaded on the page: ", drink);
     }
     previousSearches.appendChild(newBtn);
