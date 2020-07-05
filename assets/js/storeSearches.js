@@ -7,7 +7,6 @@ var drinksArray = JSON.parse(localStorage.getItem("drinks")) || [];
 
 function storeDrinkSearches(event) {
   event.preventDefault();
-
   var searchTerm = searchInput.value
 
   if (drinksArray.indexOf(searchTerm) === -1) {
@@ -21,17 +20,20 @@ function storeDrinkSearches(event) {
     newBtn.setAttribute("value", searchTerm);
 
     newBtn.onclick = function(event) {
+      event.preventDefault();
       var drink = $(this).attr("value");
       console.log(drink);
+      populateSearchResults(searchTerm);
     }
 
     previousSearches.appendChild(newBtn);
     newBtn.classList = "recent-search-terms";
     newBtn.innerHTML = searchTerm;
 
-    console.log(searchInput.value);
+    console.log("This is the searchInput.value: ", searchInput.value);
     searchInput.value = "";
-
+    console.log("Now this is the searchInput.value after I've cleared it: ", searchInput.value);
+    console.log("Here's the searchTerm: ", searchTerm);
   }
 }
 
@@ -44,6 +46,7 @@ function displayStoredDrinks() {
     newBtn.onclick = function (event) {
       var drink = event.target.textContent;
       console.log(drink);
+      populateSearchResults();
     }
     previousSearches.appendChild(newBtn);
     newBtn.classList = "recent-search-terms";
