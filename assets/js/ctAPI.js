@@ -1,4 +1,4 @@
-function fetchDrink() {
+function fetchDrink(drink = null) {
 
     // ID Search box
     var searchInput = document.getElementById("drink-search").value //This will need to be modified to match html page
@@ -12,11 +12,15 @@ function fetchDrink() {
     var directions = document.getElementById("directions") //This will need to be modified to match html page
         // ADD BUTTON ID to drink-search
 
-    var drinkDisplayed = searchInput.trim().replace(" ", "_");
+    var drinkDisplayed = searchInput;
     ingredients.textContent = "";
-    console.log(searchInput);
+    console.log({drink, drinkDisplayed});
+    console.trace(drink); // "Trace" shows where a variable came from.
     console.log(searchInput.value);
-    fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkDisplayed)
+    var url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + (drink || drinkDisplayed).trim().replace(" ", "_");
+    console.log(url);
+
+    fetch(url)
         .then(function(response) {
             return response.json();
         })
@@ -49,4 +53,4 @@ function fetchDrink() {
         })
 }
 
-document.getElementById("search-button-drink").addEventListener("click", fetchDrink);
+document.getElementById("search-button-drink").addEventListener("click", () => fetchDrink());

@@ -11,7 +11,7 @@ function pushDrink(e) {
 }
 
 // Function that takes in drink search and gets YouTube video
-function getVideo() {
+function getVideo(drink = null) {
     videoContainer.style.display = "none";
     $(videoContainer).empty()
     var drinkSearch = drinkInput.value;
@@ -23,7 +23,7 @@ function getVideo() {
       url: 'https://www.googleapis.com/youtube/v3/search',
       data: {
           key: 'AIzaSyBzgwBGOijygJTj2Httg3gan4_e-w5NjWs',
-          q: "how to make the best " + drinkSearch + " cocktail",
+          q: "how to make the best " + typeof drink === "string" ? drink : drinkSearch + " cocktail", // "If 'drink' is a string, use it; if it's not, use 'drinkSearch' instead."
           part: 'snippet',
           maxResults: 1,
           type: 'video',
