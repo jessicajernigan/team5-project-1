@@ -36,7 +36,7 @@ function storeDrinkSearches(event) {
 
     previousSearches.appendChild(newBtn);
     newBtn.classList = "recent-search-terms";
-    newBtn.innerHTML = searchTerm;
+    newBtn.innerHTML = toUpper(searchTerm);
 
     console.log("This is the searchInput.value: ", searchInput.value);
     searchInput.value = "";
@@ -65,7 +65,7 @@ function displayStoredDrinks() {
     }
     previousSearches.appendChild(newBtn);
     newBtn.classList = "recent-search-terms";
-    newBtn.innerHTML = drinksArray[i];
+    newBtn.innerHTML = toUpper(drinksArray[i]);
   }
 }
 
