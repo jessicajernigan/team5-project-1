@@ -93,6 +93,7 @@ footer div a {
 footer div a:hover {
     text-shadow: 0 0 3px var(--text);
     color: var(--box);
+    font-weight: bold;
 }
 
 
