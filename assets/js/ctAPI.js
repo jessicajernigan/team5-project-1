@@ -38,14 +38,15 @@ function fetchDrink() {
             });
 
             ingredientsMap.forEach((ing, idx) => {
-                // console.log(ing)
-                if (measureMap[idx]) finalIngredients[ing] = measureMap[idx]
-                else finalIngredients[ing] = 'to taste'
-            })
-            // console.log(finalIngredients)
-            Object.entries(finalIngredients).forEach(([key, val], ing) => {
+                    console.log(ing)
+                    if (measureMap[idx]) finalIngredients[ing] = measureMap[idx]
+                    else finalIngredients[ing] = 'to taste'
+                })
+                // console.log(finalIngredients)
+            Object.entries(finalIngredients).forEach(([key, val], ind) => {
                 ingredients.textContent += `${key}: ${val}\n`
             });
         })
 }
+
 document.getElementById("search-button-drink").addEventListener("click", fetchDrink);
