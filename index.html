@@ -46,33 +46,17 @@
                     </div>
 
                     <div class="column-container dropdown">
-                        <button onclick="dropDown()" id="drop-btn" class="btn dropbtn">(Dropdown)</button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                       <div class="dropDown">
+                        <select id="drop-list">
+                            <option value="">Choose your base liquor</option>
+                            <option value="tequila">Tequila</option>
+                            <option value="whiskey">Whiskey</option>
+                            <option value="gin">Gin</option>
+                            <option value="rum">Rum</option>
+                            <option value="vodka">Vodka</option>
+                        </select>
                         </div>
-                        <!--<div class="dropdown-content">
-                            <
-                            <a href="#">Link 1</a>
-
-                            <a href="#">Link 2</a>
-
-                            <a href="#">Link 3</a>
-
-                        </div> -->
-
-
-                        <!--<ul class="vertical menu accordion-menu" data-accordion-menu>
-                            <li>
-                              <a href="#">Item 1</a>
-                              <ul class="menu vertical nested">
-                                <li><a href="#">Item 1A</a></li>
-                                <li><a href="#">Item 1B</a></li>
-                              </ul>
-                            </li>
-                            <li><a href="#">Item 2</a></li>
-                          </ul> -->
+                        
                     </div>
 
                     <div class="column-container">
@@ -87,7 +71,7 @@
                     <article class="column-container">
                         <h2 id="cocktail-name-main"></h2>
                         <h3>You will need...</h3>
-                        <img id="drinkPic" />
+                        <img id="drinkPic"/>
                         <p id="ingredients"></p>
                         <p id="directions"></p>
                     </article>
