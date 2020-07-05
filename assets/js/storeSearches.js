@@ -22,8 +22,8 @@ function storeDrinkSearches(event) {
     newBtn.onclick = function(event) {
       event.preventDefault();
       var drink = $(this).attr("value");
-      console.log(drink);
-      populateSearchResults(searchTerm);
+      console.log("Here's 'drink' when I click a button: ", drink);
+      populateSearchResults(drink);
     }
 
     previousSearches.appendChild(newBtn);
@@ -34,7 +34,9 @@ function storeDrinkSearches(event) {
     searchInput.value = "";
     console.log("Now this is the searchInput.value after I've cleared it: ", searchInput.value);
     console.log("Here's the searchTerm: ", searchTerm);
-  }
+    populateSearchResults(searchTerm);
+    console.log("I've called the other function...")
+;  }
 }
 
 
@@ -45,8 +47,9 @@ function displayStoredDrinks() {
 
     newBtn.onclick = function (event) {
       var drink = event.target.textContent;
-      console.log(drink);
-      populateSearchResults();
+      drinkDisplayed.innerHTML = drink;
+      populateSearchResults(drink);
+      console.log("Here's the 'drink' value when I click a button that loaded on the page: ",drink);
     }
     previousSearches.appendChild(newBtn);
     newBtn.classList = "recent-search-terms";
