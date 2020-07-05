@@ -23,7 +23,6 @@ function storeDrinkSearches(event) {
       event.preventDefault();
       var drink = $(this).attr("value");
       console.log("Here's 'drink' when I click a button: ", drink);
-      populateSearchResults(drink);
     }
 
     previousSearches.appendChild(newBtn);
@@ -46,7 +45,6 @@ function displayStoredDrinks() {
     newBtn.onclick = function (event) {
       var drink = event.target.textContent;
       drinkDisplayed.innerHTML = drink;
-      populateSearchResults();
       console.log("Here's the 'drink' value when I click a button that loaded on the page: ", drink);
     
     }
