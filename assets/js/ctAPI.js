@@ -8,13 +8,13 @@ var trivia = document.getElementById("trivia") //This will need to be modified t
 var drinkPic = document.getElementById("drinkPic") //This will need to be modified to match html page
     // ID Directions
 var directions = document.getElementById("directions") //This will need to be modified to match html page
+    // ADD BUTTON ID to drink-search
 
 
-$(document).ready(function() {
+var drinkDisplayed = searchInput.trim().replace(" ", "_");
+console.log(drinkDisplayed);
 
-    var drinkDisplayed = searchInput.value
-    console.log(drinkDisplayed);
-
+function fetchDrink() {
     fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkDisplayed)
         .then(function(response) {
             return response.json();
@@ -46,4 +46,5 @@ $(document).ready(function() {
                 ingredients.textContent += `${key}: ${val}\n`
             });
         })
-});
+}
+document.getElementById("search-button-drink").addEventListener("click", fetchDrink);
