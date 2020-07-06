@@ -17,7 +17,7 @@ function toUpper(drink) {
 
 function storeDrinkSearches(event) {
   event.preventDefault();
-  var searchTerm = searchInput.value
+  var searchTerm = toUpper(searchInput.value)
   drinkDisplayed.innerHTML = toUpper(searchTerm);
 
   if (drinksArray.indexOf(searchTerm) === -1) {
