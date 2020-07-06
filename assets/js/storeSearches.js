@@ -2,6 +2,7 @@ var searchInput = document.getElementById("drink-search");
 var drinkForm = document.querySelector(".entry");
 var drinkDisplayed = document.getElementById('cocktail-name-main');
 var drinksArray = JSON.parse(localStorage.getItem("drinks")) || [];
+var clearStoredDrinksEl = document.getElementById("clear-btn");
 
 // Function that forces upper case on first letter of displayed drink name - works for multiple word drinks
 function toUpper(drink) {
@@ -69,8 +70,18 @@ function displayStoredDrinks() {
   }
 }
 
-
+function clearStoredDrinks() {
+  $("#clear-btn").on("click", function() {
+    if (localStorage.getItem("drinks")) {
+      localStorage.clear();
+      location.reload();
+    } else {
+      return
+    }
+})
+}
 
 // Event Listener
 drinkForm.addEventListener('submit', storeDrinkSearches);
+clearStoredDrinksEl.addEventListener('click', clearStoredDrinks);
 displayStoredDrinks();
