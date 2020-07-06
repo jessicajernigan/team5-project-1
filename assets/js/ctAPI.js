@@ -14,7 +14,7 @@ function fetchDrink(drink = null) {
 
     var drinkDisplayed = searchInput;
     ingredients.textContent = "";
-    console.log({drink, drinkDisplayed});
+    console.log({ drink, drinkDisplayed });
     console.trace(drink); // "Trace" shows where a variable came from.
     var url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + (drink || drinkDisplayed).trim().replace(" ", "_");
     console.log(url);
@@ -25,6 +25,7 @@ function fetchDrink(drink = null) {
         })
         .then(function(data) {
             console.log(data)
+            drinkPic.innerHTML = data.drinks[0].strDrinkThumb
             directions.innerHTML = data.drinks[0].strInstructions
             drinkPic.src = data.drinks[0].strDrinkThumb
             var ingredientsMap = [],
