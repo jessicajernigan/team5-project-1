@@ -32,18 +32,22 @@ function storeDrinkSearches(event) {
     newBtn.onclick = function(event) {
       event.preventDefault();
       var drink = $(this).attr("value");
-      console.log("Here's 'drink' when I click a button: ", drink);
+      // console.log("Here's 'drink' when I click a button: ", drink);
     }
 
-    previousSearches.appendChild(newBtn);
-    newBtn.classList = "recent-search-terms";
-    newBtn.innerHTML = toUpper(searchTerm);
+    if (localStorage.getItem(drinksArray) == searchTerm) {
+      console.log("this drink has already been searched.")
+  } else {
+      previousSearches.appendChild(newBtn);
+      newBtn.classList = "recent-search-terms";
+      newBtn.innerHTML = toUpper(searchTerm);
     clearButtonDisplay();
-
-    console.log("This is the searchInput.value: ", searchInput.value);
+  }
+    
+    // console.log("This is the searchInput.value: ", searchInput.value);
     searchInput.value = "";
-    console.log("Now this is the searchInput.value after I've cleared it: ", searchInput.value);
-    console.log("Here's the searchTerm: ", searchTerm);
+    // console.log("Now this is the searchInput.value after I've cleared it: ", searchInput.value);
+    // console.log("Here's the searchTerm: ", searchTerm);
 ;  }
 }
 
@@ -65,7 +69,7 @@ function displayStoredDrinks() {
         searchClicked(drink);
         drinkDisplayed.innerHTML = toUpper(drink);
         clearButtonDisplay();
-        console.log("Here's the 'drink' value when I click a button that loaded on the page: ", drink);
+        // console.log("Here's the 'drink' value when I click a button that loaded on the page: ", drink);
       }
       previousSearches.appendChild(newBtn);
       newBtn.classList = "recent-search-terms";
