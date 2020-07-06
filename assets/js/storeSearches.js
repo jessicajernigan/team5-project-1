@@ -71,14 +71,12 @@ function displayStoredDrinks() {
 }
 
 function clearStoredDrinks() {
-  $("#clear-btn").on("click", function() {
     if (localStorage.getItem("drinks")) {
       localStorage.clear();
       location.reload();
     } else {
-      return
+      console.log("nothing in storage");
     }
-})
 }
 
 // Event Listener
