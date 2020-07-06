@@ -18,12 +18,12 @@ function toUpper(drink) {
 function storeDrinkSearches(event) {
   event.preventDefault();
   var searchTerm = toUpper(searchInput.value)
-  drinkDisplayed.innerHTML = toUpper(searchTerm);
+  drinkDisplayed.innerHTML = searchTerm;
 
   if (drinksArray.indexOf(searchTerm) === -1) {
     drinksArray.push(searchTerm);
     localStorage.setItem("drinks", JSON.stringify(drinksArray));
-    console.log(drinksArray);
+    // console.log(drinksArray);
 
     var previousSearches = document.getElementById('previous-searches');
     var newBtn = document.createElement("button");
@@ -36,7 +36,7 @@ function storeDrinkSearches(event) {
     }
 
     if (localStorage.getItem(drinksArray) == searchTerm) {
-      console.log("this drink has already been searched.")
+      console.log("drink already searched")
   } else {
       previousSearches.appendChild(newBtn);
       newBtn.classList = "recent-search-terms";

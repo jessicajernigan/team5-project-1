@@ -17,7 +17,7 @@ function fetchDrink(drink = null) {
     console.log({ drink, drinkDisplayed });
     console.trace(drink); // "Trace" shows where a variable came from.
     var url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + (drink || drinkDisplayed).trim().replace(" ", "_");
-    console.log(url);
+    // console.log(url);
 
     fetch(url)
         .then(function(response) {
@@ -25,32 +25,39 @@ function fetchDrink(drink = null) {
         })
         .then(function(data) {
             console.log(data)
-            drinkPic.innerHTML = data.drinks[0].strDrinkThumb
-            directions.innerHTML = data.drinks[0].strInstructions
-            drinkPic.src = data.drinks[0].strDrinkThumb
-            var ingredientsMap = [],
-                measureMap = [],
-                finalIngredients = {}
-
-            Object.entries(data.drinks[0]).forEach(([key, val]) => {
-                // console.log(val)
-                if (val) {
-                    if (key.startsWith("strIng")) ingredientsMap.push(val)
-                    else if (key.startsWith("strMea")) measureMap.push(val)
-                }
-
-            });
-
-            ingredientsMap.forEach((ing, idx) => {
-                    console.log(ing)
-                    if (measureMap[idx]) finalIngredients[ing] = measureMap[idx]
-                    else finalIngredients[ing] = 'to taste'
-                })
-                // console.log(finalIngredients)
-            Object.entries(finalIngredients).forEach(([key, val], ind) => {
-                ingredients.textContent += `${key}: ${val}\n`
-            });
-        })
+            console.log(data.drinks);
+            console.log(data.drinks[0].strDrink);
+            console.log(drink);
+            // if (data.drinks[0].strDrink === drink || data.drinks[0].strDrink === drinkQc) {
+                drinkPic.innerHTML = data.drinks[0].strDrinkThumb
+                directions.innerHTML = data.drinks[0].strInstructions
+                drinkPic.src = data.drinks[0].strDrinkThumb
+                var ingredientsMap = [],
+                    measureMap = [],
+                    finalIngredients = {}
+    
+                Object.entries(data.drinks[0]).forEach(([key, val]) => {
+                    // console.log(val)
+                    if (val) {
+                        if (key.startsWith("strIng")) ingredientsMap.push(val)
+                        else if (key.startsWith("strMea")) measureMap.push(val)
+                    }
+    
+                });
+    
+                ingredientsMap.forEach((ing, idx) => {
+                        console.log(ing)
+                        if (measureMap[idx]) finalIngredients[ing] = measureMap[idx]
+                        else finalIngredients[ing] = 'to taste'
+                    })
+                    // console.log(finalIngredients)
+                Object.entries(finalIngredients).forEach(([key, val], ind) => {
+                    ingredients.textContent += `${key}: ${val}\n`
+                }); 
+            // } else {
+            // console.log("invalid drink search");  
+            // }
+            })
 }
 
 document.getElementById("search-button-drink").addEventListener("click", () => fetchDrink());
