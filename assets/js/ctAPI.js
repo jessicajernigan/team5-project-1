@@ -24,10 +24,6 @@ function fetchDrink(drink = null) {
             return response.json();
         })
         .then(function(data) {
-            console.log(data)
-            console.log(data.drinks);
-            console.log(data.drinks[0].strDrink);
-            console.log(drink);
             // if (data.drinks[0].strDrink === drink || data.drinks[0].strDrink === drinkQc) {
                 drinkPic.innerHTML = data.drinks[0].strDrinkThumb
                 directions.innerHTML = data.drinks[0].strInstructions
