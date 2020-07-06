@@ -226,7 +226,7 @@ footer div a:hover {
 
 #clear-btn {
     background-color: var(--text);
-    display: block;
+    display: none;
     width: auto;
     cursor: pointer;
     margin-top: 20px;
