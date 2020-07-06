@@ -283,6 +283,7 @@ footer div a:hover {
 #drop-list {
     background-color: var(--text);
     color: rgba(255, 0, 127, 1);
+    margin-bottom: -.25rem;
 }
 
 /* .dropDown {
