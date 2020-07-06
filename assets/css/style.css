@@ -49,6 +49,7 @@ main {
     align-items: center;
     justify-content: center;
   }
+
   .imgwrap {
      width: 50%; /*or whatever you choose*/
      margin: auto;
@@ -199,6 +200,10 @@ footer div a:hover {
     display: inline-block;
 }
 
+.sidebar-interactions {
+    padding: 15px 10px 0px;
+}
+
 /* Button Styles */
 
 .btn {
@@ -284,9 +289,9 @@ footer div a:hover {
     color: rgba(255, 0, 127, 1);
 }
 
-.dropDown {
+/* .dropDown {
     padding-top: 15px;
-}
+} */
 
 /* Dropdown Content (Hidden by Default) */
 

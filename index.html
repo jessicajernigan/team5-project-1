@@ -25,22 +25,24 @@
         <main class="row large-uncollapse align-justify">
             <div class="large-4 columns">
                 <div class="column-container">
-                    <h3 class="search-prompt">Search by Cocktail</h3>
-                    <form class="entry">
-                        <div class="row">
-                            <div class="column">
-                                <div class="row collapse postfix-round">
-                                    <div class="small-9 columns">
-                                        <input id="drink-search" type="text" placeholder='e.g. "Margarita"'>
-                                    </div>
-                                    <div class="small-3 columns">
-                                        <button id="search-button-drink" type="submit" class="search-btn postfix"><i
-                                                class="fas drink-icon">&#xf561;</i></button>
+                    <div class="sidebar-interactions">
+                        <h3 class="search-prompt">Search by Cocktail</h3>
+                        <form class="entry">
+                            <div class="row">
+                                <div class="column">
+                                    <div class="row collapse postfix-round">
+                                        <div class="small-9 columns">
+                                            <input id="drink-search" type="text" placeholder='e.g. "Margarita"'>
+                                        </div>
+                                        <div class="small-3 columns">
+                                            <button id="search-button-drink" type="submit" class="search-btn postfix"><i
+                                                    class="fas drink-icon">&#xf561;</i></button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
 
                     <div id="previous-searches" class="previous-searches"></div>
                     <button class="btn" id="clear-btn">Clear Recent Searches</button>
@@ -48,7 +50,7 @@
                 </div>
 
                 <div class="column-container dropdown">
-                    <div class="dropDown">
+                    <div class="sidebar-interactions">
                         <select id="drop-list">
                             <option value="">Choose your base liquor</option>
                             <option value="tequila">Tequila</option>
