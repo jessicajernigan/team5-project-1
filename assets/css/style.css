@@ -132,9 +132,9 @@ footer div a:hover {
     
 }
 
-.search-prompt {
+/* .search-prompt {
     font-size: 1.2em;
-}
+} */
 
 #youtube {
     display: none;
@@ -144,6 +144,10 @@ footer div a:hover {
     font-size: 1.3em;
     min-height: 25px;
     padding: 1px;;
+}
+
+#presearch-placeholder {
+    display: inline-block;
 }
 
 /* Button Styles */

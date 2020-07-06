@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/foundation.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="./assets/images/pngguru.com.png"/>
+    <link rel="shortcut icon" type="image/png" href="./assets/images/pngguru.com.png" />
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 
@@ -23,57 +23,65 @@
 
     <section class="hero">
         <main class="row large-uncollapse align-justify">
-                <div class="large-4 columns">
-                    <div class="column-container">
-                        <p class="search-prompt">Search by Cocktail</p>
-                        <form class="entry">
-                            <div class="row">
-                                <div class="column">
-                                    <div class="row collapse postfix-round">
-                                        <div class="small-9 columns">
-                                            <input id="drink-search" type="text" placeholder='e.g. "Margarita"'>
-                                        </div>
-                                        <div class="small-3 columns">
-                                            <button id="search-button-drink" type="submit" class="search-btn postfix"><i
-                                                    class="fas drink-icon">&#xf561;</i></button>
-                                        </div>
+            <div class="large-4 columns">
+                <div class="column-container">
+                    <h3 class="search-prompt">Search by Cocktail</h3>
+                    <form class="entry">
+                        <div class="row">
+                            <div class="column">
+                                <div class="row collapse postfix-round">
+                                    <div class="small-9 columns">
+                                        <input id="drink-search" type="text" placeholder='e.g. "Margarita"'>
+                                    </div>
+                                    <div class="small-3 columns">
+                                        <button id="search-button-drink" type="submit" class="search-btn postfix"><i
+                                                class="fas drink-icon">&#xf561;</i></button>
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                        <div id="previous-searches" class="previous-searches">
                         </div>
-                    </div>
-
-                    <div class="column-container dropdown">
-                        <div class="dropDown">
-                            <select id="drop-list">
-                                <option value="">Choose your base liquor</option>
-                                <option value="tequila">Tequila</option>
-                                <option value="whiskey">Whiskey</option>
-                                <option value="gin">Gin</option>
-                                <option value="rum">Rum</option>
-                                <option value="vodka">Vodka</option>
-                            </select>
-                        </div>
+                    </form>
+                    <div id="previous-searches" class="previous-searches">
                     </div>
                 </div>
 
-                <div class="large-8 large-center columns">
-                    <article class="column-container">
+                <div class="column-container dropdown">
+                    <div class="dropDown">
+                        <select id="drop-list">
+                            <option value="">Choose your base liquor</option>
+                            <option value="tequila">Tequila</option>
+                            <option value="whiskey">Whiskey</option>
+                            <option value="gin">Gin</option>
+                            <option value="rum">Rum</option>
+                            <option value="vodka">Vodka</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="large-8 large-center columns">
+                <article id="ingredients-block" class="column-container">
+                    <div>
                         <h2 id="cocktail-name-main"></h2>
                         <img id="drinkPic" />
-                        <h3>You will need...</h3>
+                        <h3 class="centertext">You will need...</h3>
+                        <h4 class="centertext">Ingredients</h4>
                         <p id="ingredients"></p>
+                        <h4 class="centertext">Directions</h4>
                         <p id="directions"></p>
-                    </article>
+                    </div>
+                    <!-- <div id="presearch-placeholder">
+                        <p>"The problem with some people is that when they aren't drunk they're sober." ~ William Butler
+                            Yeats</p>
+                    </div> -->
+                </article>
 
-                    <div class="large-4 columns">
-                        <div id="youtube" class="column-container">
-                            <p class="video-description"></p>
-                        </div>
+                <div class="large-4 columns">
+                    <div id="youtube" class="column-container">
+                        <p class="video-description"></p>
                     </div>
                 </div>
+            </div>
         </main>
     </section>
 
