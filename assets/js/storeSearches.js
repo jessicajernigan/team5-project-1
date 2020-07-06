@@ -56,24 +56,25 @@ function searchClicked(drink) {
 
 
 function displayStoredDrinks() {
-  for (var i = 0; i < drinksArray.length; i++) {
-    var previousSearches = document.getElementById('previous-searches'); 
-    var newBtn = document.createElement("button");
+    for (var i = 0; i < drinksArray.length; i++) {
+      var previousSearches = document.getElementById('previous-searches'); 
+      var newBtn = document.createElement("button");
 
-    newBtn.onclick = function (event) {
-      var drink = event.target.textContent;
-      searchClicked(drink);
-      drinkDisplayed.innerHTML = toUpper(drink);
+      newBtn.onclick = function (event) {
+        var drink = event.target.textContent;
+        searchClicked(drink);
+        drinkDisplayed.innerHTML = toUpper(drink);
+        clearButtonDisplay();
+        console.log("Here's the 'drink' value when I click a button that loaded on the page: ", drink);
+      }
+      previousSearches.appendChild(newBtn);
+      newBtn.classList = "recent-search-terms";
+      newBtn.innerHTML = toUpper(drinksArray[i]);
       clearButtonDisplay();
-      console.log("Here's the 'drink' value when I click a button that loaded on the page: ", drink);
     }
-    previousSearches.appendChild(newBtn);
-    newBtn.classList = "recent-search-terms";
-    newBtn.innerHTML = toUpper(drinksArray[i]);
-    clearButtonDisplay();
   }
-}
 
+// 'Clear Recent Searches' button functionality
 function clearStoredDrinks() {
     if (localStorage.getItem("drinks")) {
       localStorage.clear();
@@ -83,6 +84,7 @@ function clearStoredDrinks() {
     }
 }
 
+// This function hides the 'Clear Recent Searches' when local storage is empty
 function clearButtonDisplay() {
   if (localStorage.getItem("drinks")) {
     document.getElementById("clear-btn").style.display = "inline-block";
