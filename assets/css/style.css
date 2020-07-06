@@ -44,6 +44,31 @@ main {
     color: var(--text);
 }
 
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .imgwrap {
+     width: 50%; /*or whatever you choose*/
+     margin: auto;
+  }
+
+  .imgwrap img {
+     display: block;
+     width: 100%;
+     max-width: 500px; /*actual image width*/
+     height: auto; /* maintain aspect ratio*/
+     margin: auto; /*optional centering of image*/
+  }
+
+
+.drink-img {
+    border: 3px outset var(--text);
+    border-radius: 15px;
+    justify-self: center;
+}
+
 .recipe-content {
     border-bottom: 1px solid;
     text-align: center;
@@ -121,6 +146,11 @@ footer div a:hover {
 
 .centerelement {
     margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
 }
 
 .fancy-heading {
@@ -279,9 +309,6 @@ footer div a:hover {
 }
 
 #drinkPic {
-    max-width: 150px;
-    max-height: 150px;
-    margin-left: 180px;
-    margin-top: 5px;
-    margin-bottom: 10px;
+    max-width: 300px;
+    max-height: 300px;
 }
