@@ -224,11 +224,12 @@ footer div a:hover {
     text-shadow: 0 0 3px var(--box);
 }
 
-#random-btn {
+#clear-btn {
     background-color: var(--text);
     display: block;
-    width: 100%;
+    width: auto;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 #drop-btn {
