@@ -37,6 +37,7 @@ body {
     transition: opacity 1s;
     -webkit-transition: opacity 1s;
     /* Safari */
+    height: 110%;
 }
 
 header {
@@ -104,8 +105,9 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     padding: 10px 10px;
+    
 }
 
 footer h2 {
@@ -170,6 +172,7 @@ footer div a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
+    
 }
 
 .column-container {
