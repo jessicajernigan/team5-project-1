@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/foundation.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="./assets/images/pngguru.com.png"/>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 
@@ -21,9 +22,8 @@
     <!-- Header Ends -->
 
     <section class="hero">
-        <main class="wrapper">
-            <div class="row large-uncollapse align-justify">
-                <div class="large-3 columns">
+        <main class="row large-uncollapse align-justify">
+                <div class="large-4 columns">
                     <div class="column-container">
                         <p class="search-prompt">Search by Cocktail</p>
                         <form class="entry">
@@ -46,49 +46,34 @@
                     </div>
 
                     <div class="column-container dropdown">
-                       <div class="dropDown">
-                        <select id="drop-list">
-                            <option value="">Choose your base liquor</option>
-                            <option value="tequila">Tequila</option>
-                            <option value="whiskey">Whiskey</option>
-                            <option value="gin">Gin</option>
-                            <option value="rum">Rum</option>
-                            <option value="vodka">Vodka</option>
-                        </select>
+                        <div class="dropDown">
+                            <select id="drop-list">
+                                <option value="">Choose your base liquor</option>
+                                <option value="tequila">Tequila</option>
+                                <option value="whiskey">Whiskey</option>
+                                <option value="gin">Gin</option>
+                                <option value="rum">Rum</option>
+                                <option value="vodka">Vodka</option>
+                            </select>
                         </div>
-                        
-                    </div>
-
-                    <div class="column-container">
-                        <button id="random-btn" class="btn centertext">
-                            Surprise Me
-                            <i style="margin-left: .5em" class="fas drink-icon">&#xf79f;</i>
-                        </button>
                     </div>
                 </div>
 
-                <div class="large-6 large-center columns">
+                <div class="large-8 large-center columns">
                     <article class="column-container">
                         <h2 id="cocktail-name-main"></h2>
+                        <img id="drinkPic" />
                         <h3>You will need...</h3>
-                        <img id="drinkPic"/>
                         <p id="ingredients"></p>
                         <p id="directions"></p>
                     </article>
 
-                    <article id="trivia" class="column-container">
-                        <h3>Trivia Section</h3>
-                        <p id="trivia"></p>
-                    </article>
-                </div>
-
-                <div class="large-3 columns">
-                    <div id="youtube" class="column-container">
-                        <p class="video-description"></p>
+                    <div class="large-4 columns">
+                        <div id="youtube" class="column-container">
+                            <p class="video-description"></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            </div>
         </main>
     </section>
 
@@ -115,8 +100,10 @@
             </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="./assets/js/ctAPI.js"></script>
     <script src="./assets/js/youtube.js"></script>
     <script src="./assets/js/storeSearches.js"></script>
