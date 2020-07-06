@@ -48,21 +48,24 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .imgwrap {
-     width: 50%; /*or whatever you choose*/
-     margin: auto;
-  }
+.imgwrap {
+    width: 50%;
+    /*or whatever you choose*/
+    margin: auto;
+}
 
-  .imgwrap img {
-     display: block;
-     width: 100%;
-     max-width: 500px; /*actual image width*/
-     height: auto; /* maintain aspect ratio*/
-     margin: auto; /*optional centering of image*/
-  }
-
+.imgwrap img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    /*actual image width*/
+    height: auto;
+    /* maintain aspect ratio*/
+    margin: auto;
+    /*optional centering of image*/
+}
 
 .drink-img {
     border: 3px outset var(--text);
@@ -107,12 +110,6 @@ footer h2 {
     float: left;
 }
 
-/* footer a {
-    text-decoration: none;
-    color: var(--box);
-    float: right;
-} */
-
 footer div {
     display: flex;
     flex: auto;
@@ -136,7 +133,6 @@ footer div a {
 footer div a:hover {
     text-shadow: 0 0 3px var(--box);
     color: var(--box);
-    /* font-weight: bold; */
 }
 
 /* Begin Custom Styles */
@@ -201,7 +197,7 @@ footer div a:hover {
 }
 
 .sidebar-interactions {
-    padding: 15px 10px 0px;
+    padding: 10px;
 }
 
 /* Button Styles */
