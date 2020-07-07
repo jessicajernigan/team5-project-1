@@ -17,6 +17,7 @@ var clickLiquor = function() {
             newArray.push(data.drinks[idx]);
             data.drinks.splice(idx, 1);
           }
+          $(liquorSearchList).empty();
         //   console.log(newArray);
             var list = document.createElement("ul");
             var drinkOne = document.createElement("button");
@@ -124,16 +125,16 @@ var clickLiquor = function() {
             list.appendChild(drinkTen);
             liquorSearchList.appendChild(list);
 
-            drinkOne.classList.add("liquor-specific-drink-search")
-            drinkTwo.classList.add("liquor-specific-drink-search")
-            drinkThree.classList.add("liquor-specific-drink-search")
-            drinkFour.classList.add("liquor-specific-drink-search")
-            drinkFive.classList.add("liquor-specific-drink-search")
-            drinkSix.classList.add("liquor-specific-drink-search")
-            drinkSeven.classList.add("liquor-specific-drink-search")
-            drinkEight.classList.add("liquor-specific-drink-search")
-            drinkNine.classList.add("liquor-specific-drink-search")
-            drinkTen.classList.add("liquor-specific-drink-search")
+            drinkOne.classList.add("drinks-suggested")
+            drinkTwo.classList.add("drinks-suggested")
+            drinkThree.classList.add("drinks-suggested")
+            drinkFour.classList.add("drinks-suggested")
+            drinkFive.classList.add("drinks-suggested")
+            drinkSix.classList.add("drinks-suggested")
+            drinkSeven.classList.add("drinks-suggested")
+            drinkEight.classList.add("drinks-suggested")
+            drinkNine.classList.add("drinks-suggested")
+            drinkTen.classList.add("drinks-suggested")
     }
     )}
 
