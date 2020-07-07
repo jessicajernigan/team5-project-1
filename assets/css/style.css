@@ -185,6 +185,28 @@ footer div a:hover {
     border-radius: 15px;
 }
 
+.video-size {
+    height: 600px;
+    width: 96.4%;
+    padding-left: 3%;
+    
+}
+
+.video-size:after {
+    content: '';
+    display: block;
+}
+
+iframe {
+    width: 99%;
+    height: 85%;
+}
+
+.video {
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
 /* .search-prompt {
     font-size: 1.2em;
 } */
