@@ -72,6 +72,7 @@ function getVideoBtn() {
 function embedVideo(data) {
     var video = document.createElement("iframe");
     var videoTitle = document.createElement("h5");
+    videoTitle.classList.add('video');
     videoTitle.textContent = data.items[0].snippet.title;
     video.setAttribute('allowFullScreen', '');
     video.setAttribute('width', '85%');
