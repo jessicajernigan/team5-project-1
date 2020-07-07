@@ -106,30 +106,28 @@ footer {
     color: var(--text);
     background-color: var(--box);
     width: 100%;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: absolute;
-    bottom: 0px;
-    padding: 10px 10px;
-    
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+footer div {
+    margin: 0 auto;
 }
 
 footer h2 {
     font-weight: bold;
     font-size: 1.5em;
     color: var(--text);
-    float: left;
 }
 
-footer div {
-    display: flex;
-    flex: auto;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-footer div a {
+footer a {
     padding: 5px 10px;
     font-size: 16px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -177,7 +175,6 @@ footer div a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    
 }
 
 .column-container {
@@ -194,7 +191,6 @@ footer div a:hover {
     height: 600px;
     width: 96.4%;
     padding-left: 3%;
-    
 }
 
 .video-size:after {
@@ -297,12 +293,12 @@ iframe {
     cursor: pointer;
 }
 
-.is-grouped {   
+.is-grouped {
     display: block;
     margin-top: 15px;
 }
 
-.is-grouped > .drinks-suggested:not(:last-child) {
+.is-grouped>.drinks-suggested:not(:last-child) {
     margin-right: 10px;
 }
 
@@ -334,6 +330,14 @@ iframe {
     display: inline-block;
 }
 
+.push1 {
+    height: 5em;
+}
+
+.push2 {
+    height: 0px;
+}
+
 .drop-title {
     color: var(--text);
 }
@@ -345,7 +349,6 @@ iframe {
     margin-bottom: -.25rem;
     opacity: .85;
 }
-
 
 /* .dropDown {
     padding-top: 15px;
@@ -374,4 +377,44 @@ iframe {
 #drinkPic {
     max-width: 300px;
     max-height: 300px;
+}
+
+@media screen and (max-width: 980px) {}
+
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width: 575px) {
+    .push1 {
+        height: 0px;
+    }
+    .push2 {
+        height: 150px;
+    }
+
+    footer {
+        height: auto;     
+    }
+
+    footer h2 {
+        font-weight: bold;
+        font-size: 2em;
+        color: var(--text);
+    }
+
+    /* footer div {
+        justify-content: space-around;
+    } */
+
+    footer a {
+        padding: 5px 10px;
+        font-size: 16px;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        background: var(--text);
+        color: var(--box);
+        border-radius: 15px;
+        text-shadow: none;
+        border: var(--background);
+        border: 2px;
+        border-style: dotted;
+    }
 }
