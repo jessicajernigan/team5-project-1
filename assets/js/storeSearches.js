@@ -66,7 +66,8 @@ function displayStoredDrinks() {
 
       newBtn.onclick = function (event) {
         var drink = event.target.textContent;
-        searchClicked(drink);
+        fetchDrink(drink);
+        getVideoBtn(drink);
         drinkDisplayed.innerHTML = toUpper(drink);
         clearButtonDisplay();
         // console.log("Here's the 'drink' value when I click a button that loaded on the page: ", drink);
