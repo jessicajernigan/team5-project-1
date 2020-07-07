@@ -5,6 +5,7 @@ var clickLiquor = function() {
     var url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + dropList.value;
     // console.log(dropList.value);
     // console.log(url);
+    $(liquorSearchList).empty();
     fetch(url)
     .then(function(response) {
         return response.json();
@@ -17,7 +18,7 @@ var clickLiquor = function() {
             newArray.push(data.drinks[idx]);
             data.drinks.splice(idx, 1);
           }
-          $(liquorSearchList).empty();
+        //   $(liquorSearchList).empty();
         //   console.log(newArray);
             var list = document.createElement("ul");
             var drinkOne = document.createElement("button");
