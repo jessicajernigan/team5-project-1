@@ -50,6 +50,11 @@ main {
     color: var(--text);
 }
 
+.sidebar-heading {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
 .box {
     display: flex;
     align-items: center;
@@ -207,9 +212,6 @@ iframe {
     font-size: 20px;
     padding-bottom: 20px;
 }
-/* .search-prompt {
-    font-size: 1.2em;
-} */
 
 #youtube {
     display: none;
@@ -227,7 +229,7 @@ iframe {
 }
 
 .sidebar-interactions {
-    padding: 10px;
+    padding: 15px;
 }
 
 /* Button Styles */
@@ -278,6 +280,32 @@ iframe {
     cursor: pointer;
 }
 
+.drinks-suggested {
+    padding: 10px 10px;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    background: var(--text);
+    color: var(--box);
+    text-shadow: none;
+    border: var(--background);
+    border: 2px outset var(--box);
+}
+
+.drinks-suggested:hover {
+    text-shadow: 0 0 3px var(--box);
+    cursor: pointer;
+}
+
+.is-grouped {   
+    display: block;
+    margin-top: 15px;
+}
+
+.is-grouped > .drinks-suggested:not(:last-child) {
+    margin-right: 10px;
+}
+
 .btn:hover {
     /* font-weight: bolder; */
     color: var(--box);
@@ -313,8 +341,11 @@ iframe {
 #drop-list {
     background-color: var(--text);
     color: rgba(255, 0, 127, 1);
+    font-weight: bold;
     margin-bottom: -.25rem;
+    opacity: .85;
 }
+
 
 /* .dropDown {
     padding-top: 15px;
