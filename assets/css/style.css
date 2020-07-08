@@ -1,0 +1,420 @@
+@import url("foundation.css");
+@import url("foundation-float.css");
+@import url("foundation-prototype.css");
+@import url("foundation-rtl.css");
+/* Imported style sheets MUST be the first item listed. */
+
+/* Reset styles. */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set variables. */
+
+:root {
+    --text: #ffff3d;
+    --box: rgba(255, 0, 127, .40);
+    --background: #00ccff;
+}
+
+/* General page element styles. */
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+html {
+    background-color: rgb(34, 34, 34);
+}
+
+body {
+    position: relative;
+    opacity: 0;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    /* Safari */
+    height: 110%;
+}
+
+header {
+    background-color: var(--box);
+    color: var(--text);
+    border-bottom: 4px dotted var(--text);
+}
+
+main {
+    color: var(--text);
+}
+
+.sidebar-heading {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgwrap {
+    width: 50%;
+    /*or whatever you choose*/
+    margin: auto;
+}
+
+.imgwrap img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    /*actual image width*/
+    height: auto;
+    /* maintain aspect ratio*/
+    margin: auto;
+    /*optional centering of image*/
+}
+
+.drink-img {
+    border: 3px outset var(--text);
+    border-radius: 15px;
+    justify-self: center;
+}
+
+.recipe-content {
+    border-bottom: 1px solid;
+    text-align: center;
+    margin: 20px auto 10px auto;
+    width: 30%;
+    color: var(--text);
+}
+
+.recipe-content-h2 {
+    border-bottom: 2px solid;
+    text-align: center;
+    margin: 20px auto 10px auto;
+    width: 50%;
+    color: var(--text);
+}
+
+/* Footer Styles */
+
+footer {
+    color: var(--text);
+    background-color: var(--box);
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+footer div {
+    margin: 0 auto;
+}
+
+footer h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: var(--text);
+}
+
+footer a {
+    padding: 5px 10px;
+    font-size: 16px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: var(--text);
+    color: var(--box);
+    border-radius: 15px;
+    text-shadow: none;
+    border: var(--background);
+    border: 2px;
+    border-style: dotted;
+}
+
+footer div a:hover {
+    text-shadow: 0 0 3px var(--box);
+    color: var(--box);
+}
+
+/* Begin Custom Styles */
+
+.centertext {
+    text-align: center;
+}
+
+.centerelement {
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.fancy-heading {
+    font-family: 'Pacifico', cursive;
+}
+
+.header-title {
+    margin-bottom: 0rem;
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+}
+
+.hero-img {
+    background-image: url("../images/bg_recipes.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.column-container {
+    background-color: var(--box);
+    /* backdrop-filter: saturate(180%) blur(1rem); */
+    margin: 15px;
+    padding: 15px;
+    border: 1px groove var(--text);
+    color: var(--text);
+    border-radius: 15px;
+}
+
+.video-size {
+    height: 600px;
+    width: 96.4%;
+    padding-left: 3%;
+}
+
+.video-size:after {
+    content: '';
+    display: block;
+}
+
+iframe {
+    width: 99%;
+    height: 85%;
+}
+
+.video {
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+#youtube {
+    display: none;
+}
+
+.drink-icon {
+    font-size: 1.3em;
+    min-height: 25px;
+    padding: 1px;
+    ;
+}
+
+#presearch-placeholder {
+    display: inline-block;
+}
+
+.sidebar-interactions {
+    padding: 15px;
+}
+
+/* Button Styles */
+
+.btn {
+    padding: 10px;
+    font-size: 18px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: var(--text);
+    color: var(--box);
+    text-shadow: none;
+    border: var(--background);
+    border: 2px;
+    border-style: dotted;
+}
+
+.search-btn {
+    padding: 5px 5px;
+    font-size: 18px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: var(--text);
+    color: var(--box);
+    text-shadow: none;
+    border: var(--background);
+    border: 2px;
+    border-style: dotted;
+}
+
+.search-btn:hover {
+    text-shadow: 0 0 3px var(--box);
+    cursor: pointer;
+}
+
+.recent-search-terms {
+    padding: 10px 10px;
+    margin: 5px;
+    font-size: 18px;
+    background: none;
+    color: var(--text);
+    text-shadow: none;
+    border: var(--background);
+    border: 2px;
+    border-style: dotted;
+}
+
+.recent-search-terms:hover {
+    text-shadow: 0 0 3px var(--text);
+    cursor: pointer;
+}
+
+.drinks-suggested {
+    padding: 10px 10px;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    background: var(--text);
+    color: var(--box);
+    text-shadow: none;
+    border: var(--background);
+    border: 2px outset var(--box);
+}
+
+.drinks-suggested:hover {
+    text-shadow: 0 0 3px var(--box);
+    cursor: pointer;
+}
+
+.is-grouped {
+    display: block;
+    margin-top: 15px;
+}
+
+.is-grouped>.drinks-suggested:not(:last-child) {
+    margin-right: 10px;
+}
+
+.btn:hover {
+    /* font-weight: bolder; */
+    color: var(--box);
+    cursor: pointer;
+    text-shadow: 0 0 3px var(--box);
+}
+
+#clear-btn {
+    background-color: var(--text);
+    display: none;
+    width: auto;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#drop-btn {
+    background-color: var(--text);
+    padding: 16px;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+#dropdown {
+    /* position: relative; */
+    display: inline-block;
+}
+
+.push1 {
+    height: 5em;
+}
+
+.push2 {
+    height: 0px;
+}
+
+.drop-title {
+    color: var(--text);
+}
+
+#drop-list {
+    background-color: var(--text);
+    color: rgba(255, 0, 127, 1);
+    font-weight: bold;
+    margin-bottom: -.25rem;
+    opacity: .85;
+}
+
+/* .dropDown {
+    padding-top: 15px;
+} */
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#drinkPic {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+@media screen and (max-width: 980px) {}
+
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width: 575px) {
+    .push1 {
+        height: 0px;
+    }
+    .push2 {
+        height: 150px;
+    }
+
+    footer {
+        height: auto;     
+    }
+
+    footer h2 {
+        font-weight: bold;
+        font-size: 2em;
+        color: var(--text);
+    }
+
+    /* footer div {
+        justify-content: space-around;
+    } */
+
+    footer a {
+        padding: 5px 10px;
+        font-size: 16px;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        background: var(--text);
+        color: var(--box);
+        border-radius: 15px;
+        text-shadow: none;
+        border: var(--background);
+        border: 2px;
+        border-style: dotted;
+    }
+}
