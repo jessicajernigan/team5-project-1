@@ -31,7 +31,12 @@ function storeDrinkSearches(event) {
 
     newBtn.onclick = function(event) {
       event.preventDefault();
+      console.log("first");
+      // var drink = event.target.textContent;
       var drink = $(this).attr("value");
+      drinkDisplayed.innerHTML = drink;
+      fetchDrink(drink);
+      getVideoBtn(drink);
       // console.log("Here's 'drink' when I click a button: ", drink);
     }
 
@@ -66,6 +71,7 @@ function displayStoredDrinks() {
 
       newBtn.onclick = function (event) {
         var drink = event.target.textContent;
+        console.log("second");
         fetchDrink(drink);
         getVideoBtn(drink);
         drinkDisplayed.innerHTML = toUpper(drink);
