@@ -18,5 +18,6 @@ I FIND Barkeep and am able to store previous searches while looking for drinks
 * Ideas for drinks based on base liquor
 * Directions populated for each drink with picture and "how to" YouTube video
 
+<!-- Pic here of full website-->
 
-
+<!-- Pic here of mobile website -->
