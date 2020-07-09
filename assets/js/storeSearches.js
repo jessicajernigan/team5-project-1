@@ -16,7 +16,7 @@ function toUpper(drink) {
    }
 
 function storeDrinkSearches(event) {
-  event.preventDefault();
+  // event.preventDefault();
   var searchTerm = toUpper(searchInput.value)
   hideQuoteShowContent();
   drinkDisplayed.innerHTML = searchTerm;
@@ -30,18 +30,19 @@ function storeDrinkSearches(event) {
     newBtn.setAttribute("value", searchTerm);
     newBtn.onclick = function(event) {
       event.preventDefault();
-      console.log("first");
+      // console.log("first");
       // var drink = event.target.textContent;
       var drink = $(this).attr("value");
       hideQuoteShowContent();
+      searchInput.value = drink;
       drinkDisplayed.innerHTML = drink;
-      fetchDrink(drink);
-      getVideoBtn(drink);
+      fetchDrink(searchInput);
+      getVideoBtn(searchInput);
       // console.log("Here's 'drink' when I click a button: ", drink);
     }
 
     if (localStorage.getItem(drinksArray) == searchTerm) {
-      console.log("drink already searched")
+      // console.log("drink already searched")
   } else {
       previousSearches.appendChild(newBtn);
       newBtn.classList = "recent-search-terms";
@@ -49,7 +50,6 @@ function storeDrinkSearches(event) {
       newBtn.innerHTML = toUpper(searchTerm);
     clearButtonDisplay();
   }
-    
     // console.log("This is the searchInput.value: ", searchInput.value);
     searchInput.value = "";
     // console.log("Now this is the searchInput.value after I've cleared it: ", searchInput.value);
@@ -72,9 +72,11 @@ function displayStoredDrinks() {
 
       newBtn.onclick = function (event) {
         var drink = event.target.textContent;
-        console.log("second");
-        fetchDrink(drink);
-        getVideoBtn(drink);
+        searchInput.value = drink;
+        // console.log("second");
+        // console.log(searchInput);
+        fetchDrink(searchInput);
+        getVideoBtn(searchInput);
         drinkDisplayed.innerHTML = toUpper(drink);
         hideQuoteShowContent();
         clearButtonDisplay();
@@ -82,7 +84,6 @@ function displayStoredDrinks() {
       }
       previousSearches.appendChild(newBtn);
       newBtn.classList = "recent-search-terms";
-      // hideQuoteShowContent();
       newBtn.innerHTML = toUpper(drinksArray[i]);
       clearButtonDisplay();
     }
@@ -94,7 +95,7 @@ function clearStoredDrinks() {
       localStorage.clear();
       location.reload();
     } else {
-      console.log("nothing in storage");
+      // console.log("nothing in storage");
     }
 }
 
@@ -103,12 +104,12 @@ function clearButtonDisplay() {
   if (localStorage.getItem("drinks")) {
     document.getElementById("clear-btn").style.display = "inline-block";
   } else {
-    console.log("clear button hidden");
+    // console.log("clear button hidden");
   }
 }
 
 // Event Listener
-drinkForm.addEventListener('submit', storeDrinkSearches);
+// drinkForm.addEventListener('submit', checkEntry);
 clearStoredDrinksEl.addEventListener('click', clearStoredDrinks);
 displayStoredDrinks();
 clearButtonDisplay();
