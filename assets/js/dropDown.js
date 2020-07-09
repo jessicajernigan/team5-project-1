@@ -28,7 +28,7 @@ var clickLiquor = function() {
             var drinkTen = document.createElement("button");
 
             drinkOne.onclick = function (event) {
-<<<<<<< HEAD
+
                 var drink = event.target.textContent;
                 fetchDrink(drink);
                 getVideoBtn(drink);
@@ -44,141 +44,152 @@ var clickLiquor = function() {
                 hideQuoteShowContent();
                 drinkDisplayed.innerHTML = toUpper(drink);
                 clearButtonDisplay();
-=======
-            var drink = event.target.textContent;
-            searchInput.value = drink;
-            fetchDrink(searchInput);
-            getVideoBtn(searchInput);
-            drinkDisplayed.innerHTML = toUpper(drink);
-            clearButtonDisplay();
-              }
 
-            drinkTwo.onclick = function (event) {
             var drink = event.target.textContent;
-            searchInput.value = drink;
-            fetchDrink(searchInput);
-            getVideoBtn(searchInput);
-            drinkDisplayed.innerHTML = toUpper(drink);
-            clearButtonDisplay();
->>>>>>> e968a24918390b430c6a34d43e16816e3a7dd1ec
-            }
-
-            drinkThree.onclick = function (event) {
-            var drink = event.target.textContent;
-<<<<<<< HEAD
             fetchDrink(drink);
             getVideoBtn(drink);
             hideQuoteShowContent();
-=======
+            drinkDisplayed.innerHTML = toUpper(drink);
+            clearButtonDisplay();
+            var drink = event.target.textContent;
             searchInput.value = drink;
             fetchDrink(searchInput);
             getVideoBtn(searchInput);
->>>>>>> e968a24918390b430c6a34d43e16816e3a7dd1ec
+            drinkDisplayed.innerHTML = toUpper(drink);
+            clearButtonDisplay();
+              }
+
+            drinkTwo.onclick = function (event) {
+            var drink = event.target.textContent;
+            searchInput.value = drink;
+            fetchDrink(searchInput);
+            getVideoBtn(searchInput);
+            drinkDisplayed.innerHTML = toUpper(drink);
+            clearButtonDisplay();
+
+
+            drinkThree.onclick = function (event) {
+            var drink = event.target.textContent;
+            fetchDrink(drink);
+            getVideoBtn(drink);
+            hideQuoteShowContent();
+            searchInput.value = drink;
+            fetchDrink(searchInput);
+            getVideoBtn(searchInput);
+            searchInput.value = drink;
+            fetchDrink(searchInput);
+            getVideoBtn(searchInput);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
 
             drinkFour.onclick = function (event) {
             var drink = event.target.textContent;
-<<<<<<< HEAD
+
             fetchDrink(drink);
             getVideoBtn(drink);
             hideQuoteShowContent();
-=======
             searchInput.value = drink;
             fetchDrink(searchInput);
             getVideoBtn(searchInput);
->>>>>>> e968a24918390b430c6a34d43e16816e3a7dd1ec
+            searchInput.value = drink;
+            fetchDrink(searchInput);
+            getVideoBtn(searchInput);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
 
             drinkFive.onclick = function (event) {
             var drink = event.target.textContent;
-<<<<<<< HEAD
+
             fetchDrink(drink);
             getVideoBtn(drink);
             hideQuoteShowContent();
-=======
             searchInput.value = drink;
             fetchDrink(searchInput);
             getVideoBtn(searchInput);
->>>>>>> e968a24918390b430c6a34d43e16816e3a7dd1ec
+            searchInput.value = drink;
+            fetchDrink(searchInput);
+            getVideoBtn(searchInput);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
 
             drinkSix.onclick = function (event) {
             var drink = event.target.textContent;
-<<<<<<< HEAD
+
             fetchDrink(drink);
             getVideoBtn(drink);
             hideQuoteShowContent();
-=======
             searchInput.value = drink;
             fetchDrink(searchInput);
             getVideoBtn(searchInput);
->>>>>>> e968a24918390b430c6a34d43e16816e3a7dd1ec
+            searchInput.value = drink;
+            fetchDrink(searchInput);
+            getVideoBtn(searchInput);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
 
             drinkSeven.onclick = function (event) {
             var drink = event.target.textContent;
-<<<<<<< HEAD
+
             fetchDrink(drink);
             getVideoBtn(drink);
             hideQuoteShowContent();
-=======
             searchInput.value = drink;
             fetchDrink(searchInput);
             getVideoBtn(searchInput);
->>>>>>> e968a24918390b430c6a34d43e16816e3a7dd1ec
+            searchInput.value = drink;
+            fetchDrink(searchInput);
+            getVideoBtn(searchInput);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
 
             drinkEight.onclick = function (event) {
             var drink = event.target.textContent;
-<<<<<<< HEAD
+
             fetchDrink(drink);
             getVideoBtn(drink);
             hideQuoteShowContent();
-=======
             searchInput.value = drink;
             fetchDrink(searchInput);
             getVideoBtn(searchInput);
->>>>>>> e968a24918390b430c6a34d43e16816e3a7dd1ec
+            searchInput.value = drink;
+            fetchDrink(searchInput);
+            getVideoBtn(searchInput);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
 
             drinkNine.onclick = function (event) {
             var drink = event.target.textContent;
-<<<<<<< HEAD
+
             fetchDrink(drink);
             getVideoBtn(drink);
             hideQuoteShowContent();
-=======
             searchInput.value = drink;
             fetchDrink(searchInput);
             getVideoBtn(searchInput);
->>>>>>> e968a24918390b430c6a34d43e16816e3a7dd1ec
+            searchInput.value = drink;
+            fetchDrink(searchInput);
+            getVideoBtn(searchInput);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
 
             drinkTen.onclick = function (event) {
             var drink = event.target.textContent;
-<<<<<<< HEAD
             fetchDrink(drink);
             getVideoBtn(drink);
             hideQuoteShowContent();
-=======
             searchInput.value = drink;
             fetchDrink(searchInput);
             getVideoBtn(searchInput);
->>>>>>> e968a24918390b430c6a34d43e16816e3a7dd1ec
+            searchInput.value = drink;
+            fetchDrink(searchInput);
+            getVideoBtn(searchInput);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }

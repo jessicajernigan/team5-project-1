@@ -33,11 +33,8 @@ function storeDrinkSearches(event) {
       // console.log("first");
       // var drink = event.target.textContent;
       var drink = $(this).attr("value");
-<<<<<<< HEAD
       hideQuoteShowContent();
-=======
       searchInput.value = drink;
->>>>>>> e968a24918390b430c6a34d43e16816e3a7dd1ec
       drinkDisplayed.innerHTML = drink;
       fetchDrink(searchInput);
       getVideoBtn(searchInput);
@@ -87,7 +84,6 @@ function displayStoredDrinks() {
       }
       previousSearches.appendChild(newBtn);
       newBtn.classList = "recent-search-terms";
-      // hideQuoteShowContent();
       newBtn.innerHTML = toUpper(drinksArray[i]);
       clearButtonDisplay();
     }
