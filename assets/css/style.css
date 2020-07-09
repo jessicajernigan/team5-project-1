@@ -140,7 +140,11 @@ footer h2 {
     border-style: dotted;
 }
 
-footer div a:hover {
+footer a {
+    color: var(--box);
+}
+
+footer a:hover {
     text-shadow: 0 0 3px var(--box);
     color: var(--box);
 }
@@ -341,9 +345,6 @@ iframe {
     height: 5em;
 }
 
-/* .push2 {
-    height: 0px;
-} */
 
 .drop-title {
     color: var(--text);
