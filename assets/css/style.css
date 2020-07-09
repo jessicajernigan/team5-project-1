@@ -437,3 +437,7 @@ iframe {
         border-style: dotted;
     }
 }
+
+.error {
+    color: red;
+}

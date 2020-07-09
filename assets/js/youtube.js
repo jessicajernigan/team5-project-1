@@ -21,7 +21,11 @@ function getVideo(drink = null) {
     //   url: 'https://www.googleapis.com/youtube/v3/search',
     //   data: {
     //       key: 'AIzaSyBzgwBGOijygJTj2Httg3gan4_e-w5NjWs',
+<<<<<<< HEAD
     //       q: "how to make the best " + typeof drink === "string" ? drink : drinkSearch + " cocktail", // "If 'drink' is a string, use it; if it's not, use 'drinkSearch' instead."
+=======
+    //       q: "how to make the best " + searchInput.value + " cocktail", // "If 'drink' is a string, use it; if it's not, use 'drinkSearch' instead."
+>>>>>>> e968a24918390b430c6a34d43e16816e3a7dd1ec
     //       part: 'snippet',
     //       maxResults: 1,
     //       type: 'video',
@@ -30,7 +34,10 @@ function getVideo(drink = null) {
     //   },
     //   success: function(data){
     //       embedVideo(data)
+<<<<<<< HEAD
     //     //   console.log(data);
+=======
+>>>>>>> e968a24918390b430c6a34d43e16816e3a7dd1ec
     //   },
     //   error: function(response){
     //       console.log("Request Failed");
@@ -44,12 +51,21 @@ function getVideoBtn() {
   $(videoContainer).empty()
   var drink = event.target.textContent;
   console.log("YOUTUBE API CALL");
+<<<<<<< HEAD
+=======
+  // console.log("This would have populated a " + drinkSearch + " video!")
+>>>>>>> e968a24918390b430c6a34d43e16816e3a7dd1ec
   // $.ajax({
   //   type: 'GET',
   //   url: 'https://www.googleapis.com/youtube/v3/search',
   //   data: {
+<<<<<<< HEAD
   //       key: 'AIzaSyBzgwBGOijygJTj2Httg3gan4_e-w5NjWs',
   //       q: "how to make the best " + drink + " cocktail",
+=======
+  //       key: 'AIzaSyCh6P7oQQqY6oFlPtreHQnFMH6dw0gsTug',
+  //       q: "how to make the best " + searchInput.value + " cocktail",
+>>>>>>> e968a24918390b430c6a34d43e16816e3a7dd1ec
   //       part: 'snippet',
   //       maxResults: 1,
   //       type: 'video',
@@ -79,9 +95,6 @@ function embedVideo(data) {
     videoContainer.style.display = "inline-block";
     videoContainer.appendChild(videoTitle);
     videoContainer.appendChild(video);
-    // $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId)
-    // $('h3').text(data.items[0].snippet.title)
-    // $('.video-description').text(data.items[0].snippet.description)
   }
 
 
