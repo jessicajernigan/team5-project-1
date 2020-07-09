@@ -12,6 +12,7 @@ var drinkPic = document.getElementById("drinkPic") //This will need to be modifi
         // ID Directions
 var directions = document.getElementById("directions") //This will need to be modified to match html page
 var drinkDisplayed = searchInput;
+var errorDisplayContainer = document.getElementById("input-search");
 
 // fetch function that grabs response and returns the data assuming it is a drink in the API DB
 function fetchDrink() {
@@ -32,10 +33,26 @@ function fetchDrink() {
             // console.log(responseDataArr[0].strDrink);
             if (responseDataArr === null || responseDataArr === undefined) {
                 console.log("invalid entry");
+                errorDisplayContainer.classList.add("error");
+                var errorMsg = document.createElement("small");
+                errorMsg.setAttribute("id", "error-msg");
+                errorMsg.innerHTML = "drink not in database";
+                errorMsg.classList.add("error");
+                errorDisplayContainer.appendChild(errorMsg);
             } else if (toUpper(searchInput.value) !== responseDataArr[0].strDrink) {
                 console.log("does not exactly match");
+                errorDisplayContainer.classList.add("error");
+                var errorMsg = document.createElement("small");
+                errorMsg.setAttribute("id", "error-msg");
+                errorMsg.innerHTML = "drink not in database";
+                errorMsg.classList.add("error");
+                errorDisplayContainer.appendChild(errorMsg);
             } else {
+                // $(errorMsg).remove();
                 console.log("valid entry");
+                var errorMsgGet = document.getElementById("error-msg");
+                errorDisplayContainer.classList.remove("error");
+                $(errorMsgGet).empty();
                 appendFetchData();
             }
         });

@@ -76,6 +76,7 @@ function displayStoredDrinks() {
         var drink = event.target.textContent;
         searchInput.value = drink;
         console.log("second");
+        console.log(searchInput);
         fetchDrink(searchInput);
         getVideoBtn(searchInput);
         drinkDisplayed.innerHTML = toUpper(drink);
