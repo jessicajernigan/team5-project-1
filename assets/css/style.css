@@ -227,6 +227,10 @@ iframe {
     display: none;
 }
 
+.static-quote {
+    text-align: center;
+}
+
 .sidebar-interactions {
     padding: 15px;
 }
@@ -333,13 +337,13 @@ iframe {
     display: inline-block;
 }
 
-.push1 {
+.push {
     height: 5em;
 }
 
-.push2 {
+/* .push2 {
     height: 0px;
-}
+} */
 
 .drop-title {
     color: var(--text);
@@ -387,11 +391,23 @@ iframe {
 @media screen and (max-width:768px) {}
 
 @media screen and (max-width: 575px) {
-    .push1 {
-        height: 0px;
-    }
-    .push2 {
+    .push {
         height: 150px;
+    }
+
+    .static-quote {
+        font-size: 2em;
+        font-weight: bolder;
+    }
+
+    #cocktail-name-main {
+        font-weight: bolder;
+        font-size: 2.25em;
+    }
+
+    .subheading {
+        font-weight: bolder;
+        font-size: 1.5em;
     }
 
     footer {
