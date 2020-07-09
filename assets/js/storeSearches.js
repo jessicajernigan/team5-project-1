@@ -6,7 +6,6 @@ var clearStoredDrinksEl = document.getElementById("clear-btn");
 
 // Function that forces upper case on first letter of displayed drink name - works for multiple word drinks
 function toUpper(drink) {
-  console.log(drink);
   return drink
       .toLowerCase()
       .split(' ')
@@ -21,8 +20,6 @@ function storeDrinkSearches(event) {
   var searchTerm = toUpper(searchInput.value)
   drinkDisplayed.innerHTML = searchTerm;
 
-  console.log(responseData);
-
   if (drinksArray.indexOf(searchTerm) === -1) {
     drinksArray.push(searchTerm);
     localStorage.setItem("drinks", JSON.stringify(drinksArray));
@@ -34,24 +31,24 @@ function storeDrinkSearches(event) {
 
     newBtn.onclick = function(event) {
       event.preventDefault();
-      console.log("first");
+      // console.log("first");
       // var drink = event.target.textContent;
       var drink = $(this).attr("value");
+      searchInput.value = drink;
       drinkDisplayed.innerHTML = drink;
-      fetchDrink(drink);
-      getVideoBtn(drink);
+      fetchDrink(searchInput);
+      getVideoBtn(searchInput);
       // console.log("Here's 'drink' when I click a button: ", drink);
     }
 
     if (localStorage.getItem(drinksArray) == searchTerm) {
-      console.log("drink already searched")
+      // console.log("drink already searched")
   } else {
       previousSearches.appendChild(newBtn);
       newBtn.classList = "recent-search-terms";
       newBtn.innerHTML = toUpper(searchTerm);
     clearButtonDisplay();
   }
-    
     // console.log("This is the searchInput.value: ", searchInput.value);
     searchInput.value = "";
     // console.log("Now this is the searchInput.value after I've cleared it: ", searchInput.value);
@@ -75,8 +72,8 @@ function displayStoredDrinks() {
       newBtn.onclick = function (event) {
         var drink = event.target.textContent;
         searchInput.value = drink;
-        console.log("second");
-        console.log(searchInput);
+        // console.log("second");
+        // console.log(searchInput);
         fetchDrink(searchInput);
         getVideoBtn(searchInput);
         drinkDisplayed.innerHTML = toUpper(drink);
@@ -96,7 +93,7 @@ function clearStoredDrinks() {
       localStorage.clear();
       location.reload();
     } else {
-      console.log("nothing in storage");
+      // console.log("nothing in storage");
     }
 }
 
@@ -105,7 +102,7 @@ function clearButtonDisplay() {
   if (localStorage.getItem("drinks")) {
     document.getElementById("clear-btn").style.display = "inline-block";
   } else {
-    console.log("clear button hidden");
+    // console.log("clear button hidden");
   }
 }
 

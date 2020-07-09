@@ -3,23 +3,18 @@ var dropList = document.getElementById("drop-list");
 
 var clickLiquor = function() {
     var url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + dropList.value;
-    // console.log(dropList.value);
-    // console.log(url);
     $(liquorSearchList).empty();
     fetch(url)
     .then(function(response) {
         return response.json();
     })
     .then(function(data) {
-        // console.log(data);
         var newArray = [];
         for (var i = 0; i < 10; i++) {
             var idx = Math.floor(Math.random() * data.drinks.length);
             newArray.push(data.drinks[idx]);
             data.drinks.splice(idx, 1);
           }
-        //   $(liquorSearchList).empty();
-        //   console.log(newArray);
             var list = document.createElement("ul");
             var drinkOne = document.createElement("button");
             var drinkTwo = document.createElement("button");
@@ -33,21 +28,21 @@ var clickLiquor = function() {
             var drinkTen = document.createElement("button");
 
             drinkOne.onclick = function (event) {
-                var drink = event.target.textContent;
-                searchInput.value = drink;
-                fetchDrink(searchInput);
-                getVideoBtn(searchInput);
-                drinkDisplayed.innerHTML = toUpper(drink);
-                clearButtonDisplay();
+            var drink = event.target.textContent;
+            searchInput.value = drink;
+            fetchDrink(searchInput);
+            getVideoBtn(searchInput);
+            drinkDisplayed.innerHTML = toUpper(drink);
+            clearButtonDisplay();
               }
 
             drinkTwo.onclick = function (event) {
-                var drink = event.target.textContent;
-                searchInput.value = drink;
-                fetchDrink(searchInput);
-                getVideoBtn(searchInput);
-                drinkDisplayed.innerHTML = toUpper(drink);
-                clearButtonDisplay();
+            var drink = event.target.textContent;
+            searchInput.value = drink;
+            fetchDrink(searchInput);
+            getVideoBtn(searchInput);
+            drinkDisplayed.innerHTML = toUpper(drink);
+            clearButtonDisplay();
             }
 
             drinkThree.onclick = function (event) {
