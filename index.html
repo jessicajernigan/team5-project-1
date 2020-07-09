@@ -69,30 +69,34 @@
 
             <div class="large-8 large-center columns">
                 <article id="ingredients-block" class="column-container">
-                    <div class="recipe-content-h2">
-                        <h2 id="cocktail-name-main" class="centertext"></h2>
-                    </div>
-                    <div class="box">
-                        <div class="imgwrap">
-                            <img id="drinkPic" class="drink-img" />
+                    <div id="dynamic-content-block">
+                        <div class="recipe-content-h2">
+                            <h2 id="cocktail-name-main" class="centertext"></h2>
                         </div>
-                    </div>
+                        <div class="box">
+                            <div class="imgwrap">
+                                <img id="drinkPic" class="drink-img" />
+                            </div>
+                        </div>
 
-                    <div class="recipe-content">
-                        <h3 class="centertext">Ingredients</h4>
-                    </div>
-                    <ul id="ingredients"></ul>
+                        <div class="recipe-content">
+                            <h3 class="centertext">Ingredients</h4>
+                        </div>
+                        <ul id="ingredients"></ul>
 
 
-                    <div class="recipe-content">
-                        <h3 class="centertext">Directions</h4>
+                        <div class="recipe-content">
+                            <h3 class="centertext">Directions</h4>
+                        </div>
+                        <p id="directions"></p>
                     </div>
-                    <p id="directions"></p>
-                    <!-- <div id="presearch-placeholder">
-                        <p>"The problem with some people is that when they aren't drunk they're sober." ~ William Butler
-                            Yeats</p>
-                    </div> -->
+                    <div id="presearch-placeholder">
+                        <h2>"The problem with some people is that when they aren't drunk they're sober." ~ William
+                            Butler
+                            Yeats</h2>
+                    </div>
                 </article>
+                <div class="push1"></div>
 
                 <!-- Container for Dynamically Populated YouTube Video -->
                 <div id="youtube" class="column-container video-size">
@@ -102,8 +106,7 @@
             </div>
         </main>
     </section>
-    <div class="push2"></div>
-
+    <div class="push1"></div>
 
     <footer>
         <div>
@@ -119,10 +122,13 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="./assets/js/ctAPI.js"></script>
     <script src="./assets/js/youtube.js"></script>
+    <script src="./assets/js/showHideContent.js"></script>
     <script src="./assets/js/storeSearches.js"></script>
     <script src="./assets/js/dropDown.js"></script>
     <script src="./assets/js/errorHandling.js"></script>

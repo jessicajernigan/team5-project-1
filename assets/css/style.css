@@ -217,11 +217,14 @@ iframe {
     font-size: 1.3em;
     min-height: 25px;
     padding: 1px;
-    ;
 }
 
 #presearch-placeholder {
     display: inline-block;
+}
+
+#dynamic-content-block {
+    display: none;
 }
 
 .sidebar-interactions {

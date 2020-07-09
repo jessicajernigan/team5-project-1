@@ -36,6 +36,7 @@ var clickLiquor = function() {
                 var drink = event.target.textContent;
                 fetchDrink(drink);
                 getVideoBtn(drink);
+                hideQuoteShowContent();
                 drinkDisplayed.innerHTML = toUpper(drink);
                 clearButtonDisplay();
               }
@@ -44,6 +45,7 @@ var clickLiquor = function() {
                 var drink = event.target.textContent;
                 fetchDrink(drink);
                 getVideoBtn(drink);
+                hideQuoteShowContent();
                 drinkDisplayed.innerHTML = toUpper(drink);
                 clearButtonDisplay();
             }
@@ -52,6 +54,7 @@ var clickLiquor = function() {
             var drink = event.target.textContent;
             fetchDrink(drink);
             getVideoBtn(drink);
+            hideQuoteShowContent();
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
@@ -60,6 +63,7 @@ var clickLiquor = function() {
             var drink = event.target.textContent;
             fetchDrink(drink);
             getVideoBtn(drink);
+            hideQuoteShowContent();
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
@@ -68,6 +72,7 @@ var clickLiquor = function() {
             var drink = event.target.textContent;
             fetchDrink(drink);
             getVideoBtn(drink);
+            hideQuoteShowContent();
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
@@ -76,6 +81,7 @@ var clickLiquor = function() {
             var drink = event.target.textContent;
             fetchDrink(drink);
             getVideoBtn(drink);
+            hideQuoteShowContent();
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
@@ -84,6 +90,7 @@ var clickLiquor = function() {
             var drink = event.target.textContent;
             fetchDrink(drink);
             getVideoBtn(drink);
+            hideQuoteShowContent();
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
@@ -92,6 +99,7 @@ var clickLiquor = function() {
             var drink = event.target.textContent;
             fetchDrink(drink);
             getVideoBtn(drink);
+            hideQuoteShowContent();
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
@@ -100,6 +108,7 @@ var clickLiquor = function() {
             var drink = event.target.textContent;
             fetchDrink(drink);
             getVideoBtn(drink);
+            hideQuoteShowContent();
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
@@ -108,6 +117,7 @@ var clickLiquor = function() {
             var drink = event.target.textContent;
             fetchDrink(drink);
             getVideoBtn(drink);
+            hideQuoteShowContent();
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }

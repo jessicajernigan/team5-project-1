@@ -18,22 +18,22 @@ function toUpper(drink) {
 function storeDrinkSearches(event) {
   event.preventDefault();
   var searchTerm = toUpper(searchInput.value)
+  hideQuoteShowContent();
   drinkDisplayed.innerHTML = searchTerm;
-
   if (drinksArray.indexOf(searchTerm) === -1) {
     drinksArray.push(searchTerm);
     localStorage.setItem("drinks", JSON.stringify(drinksArray));
     // console.log(drinksArray);
-
+    
     var previousSearches = document.getElementById('previous-searches');
     var newBtn = document.createElement("button");
     newBtn.setAttribute("value", searchTerm);
-
     newBtn.onclick = function(event) {
       event.preventDefault();
       console.log("first");
       // var drink = event.target.textContent;
       var drink = $(this).attr("value");
+      hideQuoteShowContent();
       drinkDisplayed.innerHTML = drink;
       fetchDrink(drink);
       getVideoBtn(drink);
@@ -45,6 +45,7 @@ function storeDrinkSearches(event) {
   } else {
       previousSearches.appendChild(newBtn);
       newBtn.classList = "recent-search-terms";
+      hideQuoteShowContent();
       newBtn.innerHTML = toUpper(searchTerm);
     clearButtonDisplay();
   }
@@ -75,11 +76,13 @@ function displayStoredDrinks() {
         fetchDrink(drink);
         getVideoBtn(drink);
         drinkDisplayed.innerHTML = toUpper(drink);
+        hideQuoteShowContent();
         clearButtonDisplay();
         // console.log("Here's the 'drink' value when I click a button that loaded on the page: ", drink);
       }
       previousSearches.appendChild(newBtn);
       newBtn.classList = "recent-search-terms";
+      // hideQuoteShowContent();
       newBtn.innerHTML = toUpper(drinksArray[i]);
       clearButtonDisplay();
     }
