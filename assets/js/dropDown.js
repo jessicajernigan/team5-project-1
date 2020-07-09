@@ -28,6 +28,21 @@ var clickLiquor = function() {
             var drinkTen = document.createElement("button");
 
             drinkOne.onclick = function (event) {
+                var drink = event.target.textContent;
+                fetchDrink(drink);
+                getVideoBtn(drink);
+                hideQuoteShowContent();
+                drinkDisplayed.innerHTML = toUpper(drink);
+                clearButtonDisplay();
+              }
+
+            drinkTwo.onclick = function (event) {
+            var drink = event.target.textContent;
+            fetchDrink(drink);
+            getVideoBtn(drink);
+            hideQuoteShowContent();
+            drinkDisplayed.innerHTML = toUpper(drink);
+            clearButtonDisplay();
             var drink = event.target.textContent;
             searchInput.value = drink;
             fetchDrink(searchInput);
@@ -47,6 +62,9 @@ var clickLiquor = function() {
 
             drinkThree.onclick = function (event) {
             var drink = event.target.textContent;
+            fetchDrink(drink);
+            getVideoBtn(drink);
+            hideQuoteShowContent();
             searchInput.value = drink;
             fetchDrink(searchInput);
             getVideoBtn(searchInput);
@@ -56,6 +74,9 @@ var clickLiquor = function() {
 
             drinkFour.onclick = function (event) {
             var drink = event.target.textContent;
+            fetchDrink(drink);
+            getVideoBtn(drink);
+            hideQuoteShowContent();
             searchInput.value = drink;
             fetchDrink(searchInput);
             getVideoBtn(searchInput);
@@ -65,6 +86,9 @@ var clickLiquor = function() {
 
             drinkFive.onclick = function (event) {
             var drink = event.target.textContent;
+            fetchDrink(drink);
+            getVideoBtn(drink);
+            hideQuoteShowContent();
             searchInput.value = drink;
             fetchDrink(searchInput);
             getVideoBtn(searchInput);
@@ -74,6 +98,9 @@ var clickLiquor = function() {
 
             drinkSix.onclick = function (event) {
             var drink = event.target.textContent;
+            fetchDrink(drink);
+            getVideoBtn(drink);
+            hideQuoteShowContent();
             searchInput.value = drink;
             fetchDrink(searchInput);
             getVideoBtn(searchInput);
@@ -83,6 +110,9 @@ var clickLiquor = function() {
 
             drinkSeven.onclick = function (event) {
             var drink = event.target.textContent;
+            fetchDrink(drink);
+            getVideoBtn(drink);
+            hideQuoteShowContent();
             searchInput.value = drink;
             fetchDrink(searchInput);
             getVideoBtn(searchInput);
@@ -92,6 +122,9 @@ var clickLiquor = function() {
 
             drinkEight.onclick = function (event) {
             var drink = event.target.textContent;
+            fetchDrink(drink);
+            getVideoBtn(drink);
+            hideQuoteShowContent();
             searchInput.value = drink;
             fetchDrink(searchInput);
             getVideoBtn(searchInput);
@@ -101,6 +134,9 @@ var clickLiquor = function() {
 
             drinkNine.onclick = function (event) {
             var drink = event.target.textContent;
+            fetchDrink(drink);
+            getVideoBtn(drink);
+            hideQuoteShowContent();
             searchInput.value = drink;
             fetchDrink(searchInput);
             getVideoBtn(searchInput);
@@ -110,6 +146,9 @@ var clickLiquor = function() {
 
             drinkTen.onclick = function (event) {
             var drink = event.target.textContent;
+            fetchDrink(drink);
+            getVideoBtn(drink);
+            hideQuoteShowContent();
             searchInput.value = drink;
             fetchDrink(searchInput);
             getVideoBtn(searchInput);
