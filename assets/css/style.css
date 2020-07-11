@@ -50,6 +50,7 @@ main {
     color: var(--text);
 }
 
+
 .sidebar-heading {
     font-size: 1.5em;
     font-weight: bold;
@@ -112,6 +113,7 @@ footer {
     bottom: 0;
     width: 100%;
     z-index: 9999;
+    position: fixed;
 }
 
 
@@ -405,6 +407,10 @@ iframe {
     .static-quote {
         font-size: 2em;
         font-weight: bolder;
+    }
+
+    footer {
+        position: sticky;
     }
 }
 
