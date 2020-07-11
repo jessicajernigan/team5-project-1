@@ -16,32 +16,32 @@ function getVideo(drink = null) {
     $(videoContainer).empty()
     var drinkSearch = drinkInput.value;
     console.log("YOUTUBE API CALL");
-    $.ajax({
-      type: 'GET',
-      url: 'https://www.googleapis.com/youtube/v3/search',
-      data: {
-          key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
+    // $.ajax({
+    //   type: 'GET',
+    //   url: 'https://www.googleapis.com/youtube/v3/search',
+    //   data: {
+    //       key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
 
-          // q: "how to make the best " + typeof drink === "string" ? drink : drinkSearch + " cocktail", // "If 'drink' is a string, use it; if it's not, use 'drinkSearch' instead."
+    //       // q: "how to make the best " + typeof drink === "string" ? drink : drinkSearch + " cocktail", // "If 'drink' is a string, use it; if it's not, use 'drinkSearch' instead."
 
-          q: "how to make the best " + searchInput.value + " cocktail", // "If 'drink' is a string, use it; if it's not, use 'drinkSearch' instead."
+    //       q: "how to make the best " + searchInput.value + " cocktail", // "If 'drink' is a string, use it; if it's not, use 'drinkSearch' instead."
 
-          part: 'snippet',
-          maxResults: 1,
-          type: 'video',
-          videoEmbeddable: true,
-          allowFullScreen: true,
-      },
-      success: function(data){
-          embedVideo(data)
+    //       part: 'snippet',
+    //       maxResults: 1,
+    //       type: 'video',
+    //       videoEmbeddable: true,
+    //       allowFullScreen: true,
+    //   },
+    //   success: function(data){
+    //       embedVideo(data)
 
-        //   console.log(data);
+    //     //   console.log(data);
 
-      },
-      error: function(response){
-          console.log("Request Failed");
-      }
-    });
+    //   },
+    //   error: function(response){
+    //       console.log("Request Failed");
+    //   }
+    // });
   }
 
 // Function that takes in drink search BUTTON and gets YouTube video
@@ -55,31 +55,31 @@ function getVideoBtn() {
 
   // console.log("This would have populated a " + drinkSearch + " video!")
 
-  $.ajax({
-    type: 'GET',
-    url: 'https://www.googleapis.com/youtube/v3/search',
-    data: {
+  // $.ajax({
+  //   type: 'GET',
+  //   url: 'https://www.googleapis.com/youtube/v3/search',
+  //   data: {
 
-        // key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
-        // q: "how to make the best " + drink + " cocktail",
+  //       // key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
+  //       // q: "how to make the best " + drink + " cocktail",
 
-        key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
-        q: "how to make the best " + searchInput.value + " cocktail",
+  //       key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
+  //       q: "how to make the best " + searchInput.value + " cocktail",
 
-        part: 'snippet',
-        maxResults: 1,
-        type: 'video',
-        videoEmbeddable: true,
-        allowFullScreen: true,
-    },
-    success: function(data){
-        embedVideo(data)
-      //   console.log(data);
-    },
-    error: function(response){
-        console.log("Request Failed");
-    }
-  });
+  //       part: 'snippet',
+  //       maxResults: 1,
+  //       type: 'video',
+  //       videoEmbeddable: true,
+  //       allowFullScreen: true,
+  //   },
+  //   success: function(data){
+  //       embedVideo(data)
+  //     //   console.log(data);
+  //   },
+  //   error: function(response){
+  //       console.log("Request Failed");
+  //   }
+  // });
 }
 
 // Function that embeds YouTube video

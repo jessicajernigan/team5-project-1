@@ -86,15 +86,14 @@ main {
 
 .recipe-content {
     border-bottom: 1px solid;
-    text-align: center;
     margin: 20px auto 10px auto;
-    width: 30%;
+    width: 40%;
     color: var(--text);
+    text-align: center;
 }
 
 .recipe-content-h2 {
     border-bottom: 2px solid;
-    text-align: center;
     margin: 20px auto 10px auto;
     width: 50%;
     color: var(--text);
@@ -108,18 +107,12 @@ footer {
     width: 100%;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     z-index: 9999;
 }
 
-footer div {
-    margin: 0 auto;
-}
 
 footer h2 {
     font-weight: bold;
@@ -149,6 +142,10 @@ footer a:hover {
     color: var(--box);
 }
 
+.footer-container {
+    margin: 0;
+}
+
 /* Begin Custom Styles */
 
 .centertext {
@@ -159,10 +156,6 @@ footer a:hover {
     margin: 0 auto;
 }
 
-.flex-container {
-    display: flex;
-    justify-content: center;
-}
 
 .fancy-heading {
     font-family: 'Pacifico', cursive;
@@ -236,7 +229,7 @@ iframe {
 }
 
 .sidebar-interactions {
-    padding: 15px;
+    padding: 25px;
 }
 
 /* Button Styles */
@@ -272,14 +265,13 @@ iframe {
 
 .recent-search-terms {
     padding: 10px 10px;
-    margin: 5px;
     font-size: 18px;
     background: none;
     color: var(--text);
     text-shadow: none;
-    border: var(--background);
     border: 2px;
     border-style: dotted;
+    margin: 0px 5px 5px 0px;
 }
 
 .recent-search-terms:hover {
@@ -337,7 +329,6 @@ iframe {
 }
 
 #dropdown {
-    /* position: relative; */
     display: inline-block;
 }
 
@@ -353,14 +344,17 @@ iframe {
 #drop-list {
     background-color: var(--text);
     color: rgba(255, 0, 127, 1);
-    font-weight: bold;
+    font-weight: bolder;
     margin-bottom: -.25rem;
-    opacity: .85;
+    opacity: .75;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto;
+    text-align: center;
+    font-size: 1em;
 }
 
-/* .dropDown {
-    padding-top: 15px;
-} */
 
 /* Dropdown Content (Hidden by Default) */
 
@@ -387,14 +381,23 @@ iframe {
     max-height: 300px;
 }
 
+.error {
+    color: red;
+}
+
 @media screen and (max-width: 980px) {}
 
 @media screen and (max-width:768px) {}
 
 @media screen and (max-width: 575px) {
+    
     .push {
-        height: 300px;
+        height: 0em;
     }
+    
+    /* .push2 {
+        height: 300px;
+    } */
 
     .static-quote {
         font-size: 2em;
@@ -406,13 +409,53 @@ iframe {
         font-size: 2.25em;
     }
 
+    .sidebar-heading {
+        font-weight: bolder;
+        font-size: 2.15em;
+        margin-bottom: .5em;
+    }
+
     .subheading {
+        font-weight: bolder;
+        font-size: 1.55em;
+    }
+
+    .sidebar-interactions {
+        align-items: center;
+        padding: 30px;
+    }
+
+    .column-container {
+        align-items: center
+    }
+
+    #ingredients-list-div {
+        padding-left: 70px;
+        margin-bottom: 15px;
+    }
+
+
+    /* Button Styles */
+    .recent-search-terms {
         font-weight: bolder;
         font-size: 1.5em;
     }
 
+    #clear-btn {
+        width: 100%;
+        font-weight: bolder;
+        padding: 12px 12px;
+        border-radius: 15px;
+    }
+
+
+    /* Footer Styles */
+
     footer {
-        height: auto;     
+        height: auto;  
+        margin: auto; 
+        text-align: center;  
+        /* display: flex; */
     }
 
     footer h2 {
@@ -421,23 +464,18 @@ iframe {
         color: var(--text);
     }
 
-    /* footer div {
-        justify-content: space-around;
-    } */
 
     .footer-btn    {
-        padding: 5px 10px;
+        padding: 10px 10px;
         justify-content: center;
         font-size: 1.5em;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         background: var(--text);
         border-radius: 15px;
         text-shadow: none;
-        border: var(--background);
         border: 2px;
-        /* text-decoration: none; */
         width: 80%;
         margin-top: 10px; 
+        margin-left: 10px;
     }
 
     footer a {
@@ -445,6 +483,3 @@ iframe {
     }
 }
 
-.error {
-    color: red;
-}
