@@ -86,15 +86,14 @@ main {
 
 .recipe-content {
     border-bottom: 1px solid;
-    text-align: center;
     margin: 20px auto 10px auto;
-    width: 30%;
+    width: 40%;
     color: var(--text);
+    text-align: center;
 }
 
 .recipe-content-h2 {
     border-bottom: 2px solid;
-    text-align: center;
     margin: 20px auto 10px auto;
     width: 50%;
     color: var(--text);
@@ -108,26 +107,22 @@ footer {
     width: 100%;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     z-index: 9999;
 }
 
-footer div {
-    margin: 0 auto;
-}
 
 footer h2 {
     font-weight: bold;
     font-size: 1.5em;
     color: var(--text);
+    margin-right: 10px;
 }
 
-footer a {
+.footer-btn {
     padding: 5px 10px;
     font-size: 16px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -140,9 +135,21 @@ footer a {
     border-style: dotted;
 }
 
-footer div a:hover {
+footer a {
+    color: var(--box);
+}
+
+footer a:hover {
     text-shadow: 0 0 3px var(--box);
     color: var(--box);
+}
+
+#footer-container {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: center;
 }
 
 /* Begin Custom Styles */
@@ -155,10 +162,6 @@ footer div a:hover {
     margin: 0 auto;
 }
 
-.flex-container {
-    display: flex;
-    justify-content: center;
-}
 
 .fancy-heading {
     font-family: 'Pacifico', cursive;
@@ -217,15 +220,22 @@ iframe {
     font-size: 1.3em;
     min-height: 25px;
     padding: 1px;
-    ;
 }
 
 #presearch-placeholder {
     display: inline-block;
 }
 
+#dynamic-content-block {
+    display: none;
+}
+
+.static-quote {
+    text-align: center;
+}
+
 .sidebar-interactions {
-    padding: 15px;
+    padding: 25px;
 }
 
 /* Button Styles */
@@ -261,14 +271,13 @@ iframe {
 
 .recent-search-terms {
     padding: 10px 10px;
-    margin: 5px;
     font-size: 18px;
     background: none;
     color: var(--text);
     text-shadow: none;
-    border: var(--background);
     border: 2px;
     border-style: dotted;
+    margin: 0px 5px 5px 0px;
 }
 
 .recent-search-terms:hover {
@@ -326,17 +335,13 @@ iframe {
 }
 
 #dropdown {
-    /* position: relative; */
     display: inline-block;
 }
 
-.push1 {
+.push {
     height: 5em;
 }
 
-.push2 {
-    height: 0px;
-}
 
 .drop-title {
     color: var(--text);
@@ -345,14 +350,17 @@ iframe {
 #drop-list {
     background-color: var(--text);
     color: rgba(255, 0, 127, 1);
-    font-weight: bold;
+    font-weight: bolder;
     margin-bottom: -.25rem;
-    opacity: .85;
+    opacity: .75;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto;
+    text-align: center;
+    font-size: 1em;
 }
 
-/* .dropDown {
-    padding-top: 15px;
-} */
 
 /* Dropdown Content (Hidden by Default) */
 
@@ -379,20 +387,162 @@ iframe {
     max-height: 300px;
 }
 
-@media screen and (max-width: 980px) {}
+.error {
+    color: red;
+}
 
-@media screen and (max-width:768px) {}
+@media screen and (max-width: 980px) {
+    .push {
+        height: 0em;
+    }
+
+    .sidebar-heading {
+        font-weight: bolder;
+        font-size: 2.15em;
+        margin-bottom: .5em;
+    }
+
+    .static-quote {
+        font-size: 2em;
+        font-weight: bolder;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .push {
+        height: 0em;
+    }
+
+    .sidebar-heading {
+        font-weight: bolder;
+        font-size: 2.15em;
+        margin-bottom: .5em;
+    }
+
+    .subheading {
+        font-weight: bolder;
+        font-size: 1.55em;
+    }
+
+    .sidebar-interactions {
+        align-items: center;
+        padding: 30px;
+    }
+
+    .recipe-content {
+        font-size: 1.45em;
+    }
+
+    #cocktail-name-main {
+        font-size: 2em;
+    }
+
+    #ingredients-list-div {
+        padding-left: 175px;
+        margin: auto;
+        font-size: 1.2em;
+    }
+
+    #directions {
+        margin: auto;
+        font-size: 1.2em;
+    }
+
+    .static-quote {
+        font-size: 2em;
+        font-weight: bolder;
+    }
+
+    /* Footer Styles */
+
+    footer h2 {
+        font-weight: bold;
+        font-size: 2em;
+        color: var(--text);
+    }
+
+
+    .footer-btn    {
+        padding: 10px 10px;
+        font-size: 1.5em;
+        background: var(--text);
+        border-radius: 15px;
+        text-shadow: none;
+        border: 2px;
+        border-color: var(--box);
+        margin-top: 10px; 
+        margin-left: 10px;
+        width: 80%;
+    }
+
+    #footer-container {
+        justify-content: center;
+    }
+}
 
 @media screen and (max-width: 575px) {
-    .push1 {
-        height: 0px;
-    }
-    .push2 {
-        height: 150px;
+    
+    .push {
+        height: 0em;
     }
 
+    .static-quote {
+        font-size: 2em;
+        font-weight: bolder;
+    }
+
+    #cocktail-name-main {
+        font-weight: bolder;
+        font-size: 2.25em;
+    }
+
+    .sidebar-heading {
+        font-weight: bolder;
+        font-size: 2.15em;
+        margin-bottom: .5em;
+    }
+
+    .subheading {
+        font-weight: bolder;
+        font-size: 1.55em;
+    }
+
+    .sidebar-interactions {
+        align-items: center;
+        padding: 30px;
+    }
+
+    .column-container {
+        align-items: center
+    }
+
+    #ingredients-list-div {
+        padding-left: 70px;
+        margin-bottom: 15px;
+    }
+
+
+    /* Button Styles */
+    .recent-search-terms {
+        font-weight: bolder;
+        font-size: 1.5em;
+    }
+
+    #clear-btn {
+        width: 100%;
+        font-weight: bolder;
+        padding: 12px 12px;
+        border-radius: 15px;
+    }
+
+
+    /* Footer Styles */
+
     footer {
-        height: auto;     
+        height: auto;  
+        margin: auto; 
+        text-align: center;  
+        /* display: flex; */
     }
 
     footer h2 {
@@ -401,24 +551,26 @@ iframe {
         color: var(--text);
     }
 
-    /* footer div {
-        justify-content: space-around;
-    } */
 
-    footer a {
-        padding: 5px 10px;
-        font-size: 16px;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    .footer-btn    {
+        padding: 10px 10px;
+        justify-content: center;
+        font-size: 1.5em;
         background: var(--text);
-        color: var(--box);
         border-radius: 15px;
         text-shadow: none;
-        border: var(--background);
         border: 2px;
-        border-style: dotted;
+        width: 80%;
+        margin-top: 10px; 
+        margin-left: 10px;
     }
-}
 
-.error {
-    color: red;
+    footer a {
+        color: var(--box);
+    }
+
+
+    #footer-container {
+        justify-content: center;
+    }
 }

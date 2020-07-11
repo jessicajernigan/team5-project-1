@@ -20,55 +20,85 @@
         </div>
     </header>
     <!-- Header Ends -->
+  
+<main class="row large-uncollapse align-justify">
 
-    <section class="hero">
-        <main class="row large-uncollapse align-justify">
-            <div class="large-4 columns">
-                <div class="column-container">
-                    <div class="sidebar-interactions">
-                        <h3 class="sidebar-heading">Search by Cocktail</h3>
-                        <form class="entry">
-                            <div class="row">
-                                <div class="column">
-                                    <div class="row collapse postfix-round">
-                                        <div id="input-search" class="small-9 columns">
-                                            <input id="drink-search" type="text" placeholder='e.g. "Margarita"'>
-                                        </div>
-                                        <div class="small-3 columns">
-                                            <button id="search-button-drink" type="submit" class="search-btn postfix"><i
-                                                    class="fas drink-icon">&#xf561;</i></button>
-                                        </div>
-                                    </div>
+        <!-- Begin Sidebar -->
+        <div class="large-4 columns">
+
+            <div class="column-container sidebar-interactions">
+                <h3 class="centertext sidebar-heading">Search by Cocktail</h3>
+
+                <form class="entry">
+                    <div class="row">
+                        <div class="column">
+                            <div class="row collapse postfix-round">
+                                <!-- Search for Cocktails -->
+                                <div id="input-search" class="small-9 columns">
+                                    <input id="drink-search" type="text" placeholder='e.g. "Margarita"'>
+                                </div>
+                                <div class="small-3 columns">
+                                    <button id="search-button-drink" type="submit" class="search-btn postfix">
+                                        <i class="fas drink-icon">&#xf561;</i>
+                                    </button>
                                 </div>
                             </div>
-                        </form>
-
-                        <div id="previous-searches" class="previous-searches"></div>
-                        <button class="btn" id="clear-btn">Clear Recent Searches</button>
-                    </div>
-                </div>
-
-                <div id="dropdown-div" class="column-container dropdown">
-                    <div class="sidebar-interactions">
-                        <h3 class="sidebar-heading">Not sure where to start?</h3>
-                        <p>Choose your base liquor to view BarKeep's top suggestions!</p>
-                        <select id="drop-list">
-                            <option value="choose">Choose your base liquor</option>
-                            <option id="tequila" class="liquor" value="tequila">Tequila</option>
-                            <option id="bourbon" class="liquor" value="bourbon">Bourbon</option>
-                            <option id="gin" class="liquor" value="gin">Gin</option>
-                            <option id="rum" class="liquor" value="rum">Rum</option>
-                            <option id="vodka" class="liquor" value="vodka">Vodka</option>
-                        </select>
-                        <div id="liquor-search-list" class="is-grouped">
                         </div>
                     </div>
-                </div>
-                <div class="push1"></div>
+                </form>
+
+        <!-- Begin Sidebar -->
+        <div class="large-4 columns">
+
+            <div class="column-container sidebar-interactions">
+                <h3 class="centertext sidebar-heading">Search by Cocktail</h3>
+
+                <form class="entry">
+                    <div class="row">
+                        <div class="column">
+                            <div class="row collapse postfix-round">
+                                <!-- Search for Cocktails -->
+                                <div id="input-search" class="small-9 columns">
+                                    <input id="drink-search" type="text" placeholder='e.g. "Margarita"'>
+                                </div>
+                                <div class="small-3 columns">
+                                    <button id="search-button-drink" type="submit" class="search-btn postfix">
+                                        <i class="fas drink-icon">&#xf561;</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Previous Searches Dynamically Generated Here -->
+                <div id="previous-searches" class="previous-searches"></div>
+                <!-- 'Clear' Button -->
+                <button class="btn" id="clear-btn">Clear Recent Searches</button>
             </div>
 
-            <div class="large-8 large-center columns">
-                <article id="ingredients-block" class="column-container">
+            <div id="dropdown-div" class="column-container dropdown sidebar-interactions">
+                <h3 class="sidebar-heading centertext">Not sure where to&nbsp;start?</h3>
+                <p>Choose a base liquor to view BarKeep's top suggestions!</p>
+                <select id="drop-list">
+                    <option value="choose">Choose your base liquor</option>
+                    <option id="tequila" class="liquor" value="tequila">Tequila</option>
+                    <option id="bourbon" class="liquor" value="bourbon">Bourbon</option>
+                    <option id="gin" class="liquor" value="gin">Gin</option>
+                    <option id="rum" class="liquor" value="rum">Rum</option>
+                    <option id="vodka" class="liquor" value="vodka">Vodka</option>
+                </select>
+
+                <!-- Drink Suggestions Dynamically Generated Here -->
+                <div id="liquor-search-list" class="is-grouped"></div>
+            </div>
+            <div class="push"></div>
+        </div>
+
+
+        <div class="large-8 large-center columns">
+            <article id="ingredients-block" class="column-container">
+                <div id="dynamic-content-block">
                     <div class="recipe-content-h2">
                         <h2 id="cocktail-name-main" class="centertext"></h2>
                     </div>
@@ -79,50 +109,59 @@
                     </div>
 
                     <div class="recipe-content">
-                        <h3 class="centertext">Ingredients</h4>
+                        <h3 class="centertext subheading">Ingredients</h4>
                     </div>
-                    <ul id="ingredients"></ul>
+                    <div id="ingredients-list-div">
+                        <ul id="ingredients"></ul>
+                    </div>
 
 
                     <div class="recipe-content">
-                        <h3 class="centertext">Directions</h4>
+                        <h3 class="centertext subheading">Directions</h4>
                     </div>
                     <p id="directions"></p>
-                    <!-- <div id="presearch-placeholder">
-                        <p>"The problem with some people is that when they aren't drunk they're sober." ~ William Butler
-                            Yeats</p>
-                    </div> -->
-                </article>
-
-                <!-- Container for Dynamically Populated YouTube Video -->
-                <div id="youtube" class="column-container video-size">
-                    <p class="video-description"></p>
                 </div>
 
-            </div>
-        </main>
-    </section>
-    <div class="push2"></div>
+                <!-- Pre-interaction Static Content -->
+                <div id="presearch-placeholder">
+                    <h2 class="static-quote">"The problem with some people is that when they aren't drunk they're
+                        sober."
+                        <br>
+                        ~ William Butler Yeats</h2>
+                </div>
+            </article>
 
+            <!-- Container for Dynamically Populated YouTube Video -->
+            <div id="youtube" class="column-container video-size">
+                <p class="video-description"></p>
+            </div>
+
+        </div>
+    </main>
 
     <footer>
-        <div>
+        <div id="footer-container">
             <h2 class="fancy-heading">Brought to you by:</h2>
-        </div>
-        <div>
-            <a class="centerelement" href="https://github.com/brandonmcguire1992" target="_blank">brandonmcguire1992</a>
-            <a class="centerelement" href="https://github.com/geocode-matt" target="_blank">geocode-matt</a>
-            <a class="centerelement" href="https://github.com/jeoldmixon" target="_blank">jeoldmixon</a>
-            <a class="centerelement" href="https://github.com/jessicajernigan" target="_blank">jessicajernigan</a>
+            <button class="footer-btn"><a class="centerelement" href="https://github.com/brandonmcguire1992"
+                    target="_blank">brandonmcguire1992</a></button>
+            <button class="footer-btn"><a class="centerelement" href="https://github.com/geocode-matt"
+                    target="_blank">geocode-matt</a></button>
+            <button class="footer-btn"><a class="centerelement" href="https://github.com/jeoldmixon"
+                    target="_blank">jeoldmixon</a></button>
+            <button class="footer-btn"><a class="centerelement" href="https://github.com/jessicajernigan"
+                    target="_blank">jessicajernigan</a></button>
         </div>
     </footer>
 
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="./assets/js/ctAPI.js"></script>
     <script src="./assets/js/youtube.js"></script>
+    <script src="./assets/js/showHideContent.js"></script>
     <script src="./assets/js/storeSearches.js"></script>
     <script src="./assets/js/dropDown.js"></script>
     <script src="./assets/js/errorHandling.js"></script>

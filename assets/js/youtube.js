@@ -20,8 +20,12 @@ function getVideo(drink = null) {
     //   type: 'GET',
     //   url: 'https://www.googleapis.com/youtube/v3/search',
     //   data: {
-    //       key: 'AIzaSyBzgwBGOijygJTj2Httg3gan4_e-w5NjWs',
+    //       key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
+
+    //       // q: "how to make the best " + typeof drink === "string" ? drink : drinkSearch + " cocktail", // "If 'drink' is a string, use it; if it's not, use 'drinkSearch' instead."
+
     //       q: "how to make the best " + searchInput.value + " cocktail", // "If 'drink' is a string, use it; if it's not, use 'drinkSearch' instead."
+
     //       part: 'snippet',
     //       maxResults: 1,
     //       type: 'video',
@@ -30,6 +34,9 @@ function getVideo(drink = null) {
     //   },
     //   success: function(data){
     //       embedVideo(data)
+
+    //     //   console.log(data);
+
     //   },
     //   error: function(response){
     //       console.log("Request Failed");
@@ -43,13 +50,18 @@ function getVideoBtn() {
   $(videoContainer).empty()
   var drink = event.target.textContent;
   console.log("YOUTUBE API CALL");
-  // console.log("This would have populated a " + drinkSearch + " video!")
-  // $.ajax({
+
+// $.ajax({
   //   type: 'GET',
   //   url: 'https://www.googleapis.com/youtube/v3/search',
   //   data: {
-  //       key: 'AIzaSyCh6P7oQQqY6oFlPtreHQnFMH6dw0gsTug',
+
+  //       // key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
+  //       // q: "how to make the best " + drink + " cocktail",
+
+  //       key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
   //       q: "how to make the best " + searchInput.value + " cocktail",
+
   //       part: 'snippet',
   //       maxResults: 1,
   //       type: 'video',
