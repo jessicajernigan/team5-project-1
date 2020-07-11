@@ -28,9 +28,9 @@ As a bored captive of quarantine, I want to liven things up with new cocktail re
 ## Interactions
 
 ### Mobile
-![website screenshot](./assets/mobile.png)
+![website screenshot](./assets/images/mobile.png)
 
-![website screenshot](./assets/full-mobile-screenshot.png)
+![website screenshot](./assets/images/full-mobile-screenshot.png)
 
 ### Tablet (Pre-Interaction)
 ![website screenshot](./assets/images/tablet-preinteraction.png)
