@@ -107,6 +107,7 @@ footer {
     width: 100%;
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -118,6 +119,7 @@ footer h2 {
     font-weight: bold;
     font-size: 1.5em;
     color: var(--text);
+    margin-right: 10px;
 }
 
 .footer-btn {
@@ -142,8 +144,12 @@ footer a:hover {
     color: var(--box);
 }
 
-.footer-container {
+#footer-container {
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: center;
 }
 
 /* Begin Custom Styles */
@@ -385,19 +391,100 @@ iframe {
     color: red;
 }
 
-@media screen and (max-width: 980px) {}
+@media screen and (max-width: 980px) {
+    .push {
+        height: 0em;
+    }
 
-@media screen and (max-width:768px) {}
+    .sidebar-heading {
+        font-weight: bolder;
+        font-size: 2.15em;
+        margin-bottom: .5em;
+    }
+
+    .static-quote {
+        font-size: 2em;
+        font-weight: bolder;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .push {
+        height: 0em;
+    }
+
+    .sidebar-heading {
+        font-weight: bolder;
+        font-size: 2.15em;
+        margin-bottom: .5em;
+    }
+
+    .subheading {
+        font-weight: bolder;
+        font-size: 1.55em;
+    }
+
+    .sidebar-interactions {
+        align-items: center;
+        padding: 30px;
+    }
+
+    .recipe-content {
+        font-size: 1.45em;
+    }
+
+    #cocktail-name-main {
+        font-size: 2em;
+    }
+
+    #ingredients-list-div {
+        padding-left: 175px;
+        margin: auto;
+        font-size: 1.2em;
+    }
+
+    #directions {
+        margin: auto;
+        font-size: 1.2em;
+    }
+
+    .static-quote {
+        font-size: 2em;
+        font-weight: bolder;
+    }
+
+    /* Footer Styles */
+
+    footer h2 {
+        font-weight: bold;
+        font-size: 2em;
+        color: var(--text);
+    }
+
+
+    .footer-btn    {
+        padding: 10px 10px;
+        font-size: 1.5em;
+        background: var(--text);
+        border-radius: 15px;
+        text-shadow: none;
+        border: 2px;
+        border-color: var(--box);
+        margin-top: 10px; 
+        margin-left: 10px;
+        width: 80%;
+    }
+
+    #footer-container {
+        justify-content: center;
+    }
+}
 
 @media screen and (max-width: 575px) {
     
     .push {
         height: 0em;
     }
-    
-    /* .push2 {
-        height: 300px;
-    } */
 
     .static-quote {
         font-size: 2em;
@@ -480,6 +567,10 @@ iframe {
 
     footer a {
         color: var(--box);
+    }
+
+    #footer-container {
+        justify-content: center;
     }
 }
 
