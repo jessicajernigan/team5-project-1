@@ -51,11 +51,7 @@ function getVideoBtn() {
   var drink = event.target.textContent;
   console.log("YOUTUBE API CALL");
 
-  // console.log("This would have populated a " + drinkSearch + " video!")
-
-  // console.log("This would have populated a " + drinkSearch + " video!")
-
-  // $.ajax({
+// $.ajax({
   //   type: 'GET',
   //   url: 'https://www.googleapis.com/youtube/v3/search',
   //   data: {
