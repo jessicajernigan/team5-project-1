@@ -16,13 +16,12 @@
 :root {
     --text: #ffff3d;
     --box: rgba(255, 0, 127, .40);
-    --background: #00ccff;
 }
 
 /* General page element styles. */
 
 html, body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     height: 100%;
     margin: 0;
 }
@@ -49,7 +48,6 @@ header {
 main {
     color: var(--text);
 }
-
 
 .sidebar-heading {
     font-size: 1.5em;
@@ -88,7 +86,7 @@ main {
 .recipe-content {
     border-bottom: 1px solid;
     margin: 20px auto 10px auto;
-    width: 40%;
+    width: 30%;
     color: var(--text);
     text-align: center;
 }
@@ -116,7 +114,6 @@ footer {
     position: fixed;
 }
 
-
 footer h2 {
     font-weight: bold;
     font-size: 1.5em;
@@ -127,14 +124,17 @@ footer h2 {
 .footer-btn {
     padding: 5px 10px;
     font-size: 16px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background: var(--text);
     color: var(--box);
     border-radius: 15px;
     text-shadow: none;
-    border: var(--background);
-    border: 2px;
-    border-style: dotted;
+    border: 3px;
+    border-style: inset;
+    border-color: var(--box);
+}
+
+.footer-btn:not(:last-child) {
+    margin-right: 5px;
 }
 
 footer a {
@@ -163,7 +163,6 @@ footer a:hover {
 .centerelement {
     margin: 0 auto;
 }
-
 
 .fancy-heading {
     font-family: 'Pacifico', cursive;
@@ -234,6 +233,11 @@ iframe {
 
 .static-quote {
     text-align: center;
+    opacity: 65%;
+}
+
+.static-quote span {
+    font-size: .65em;
 }
 
 .sidebar-interactions {
@@ -295,7 +299,6 @@ iframe {
     background: var(--text);
     color: var(--box);
     text-shadow: none;
-    border: var(--background);
     border: 2px outset var(--box);
 }
 
@@ -344,14 +347,13 @@ iframe {
     height: 5em;
 }
 
-
 .drop-title {
     color: var(--text);
 }
 
 #drop-list {
     background-color: var(--text);
-    color: rgba(255, 0, 127, 1);
+    color: rgba(66, 0, 33, .75);
     font-weight: bolder;
     margin-bottom: -.25rem;
     opacity: .75;
@@ -362,7 +364,6 @@ iframe {
     text-align: center;
     font-size: 1em;
 }
-
 
 /* Dropdown Content (Hidden by Default) */
 
@@ -397,18 +398,15 @@ iframe {
     .push {
         height: 0em;
     }
-
     .sidebar-heading {
         font-weight: bolder;
         font-size: 2.15em;
         margin-bottom: .5em;
     }
-
     .static-quote {
         font-size: 2em;
         font-weight: bolder;
     }
-
     footer {
         position: static;
     }
@@ -418,165 +416,121 @@ iframe {
     .push {
         height: 0em;
     }
-
     .sidebar-heading {
         font-weight: bolder;
         font-size: 2.15em;
         margin-bottom: .5em;
     }
-
     .subheading {
         font-weight: bolder;
         font-size: 1.55em;
     }
-
     .sidebar-interactions {
         align-items: center;
         padding: 30px;
     }
-
     .recipe-content {
         font-size: 1.45em;
+        width: 75%;
     }
-
     #cocktail-name-main {
         font-size: 2em;
     }
-
     #ingredients-list-div {
         padding-left: 175px;
         margin: auto;
         font-size: 1.2em;
     }
-
     #directions {
         margin: auto;
         font-size: 1.2em;
     }
-
     .static-quote {
         font-size: 2em;
         font-weight: bolder;
     }
-
     /* Footer Styles */
-
     footer h2 {
         font-weight: bold;
         font-size: 2em;
         color: var(--text);
     }
-
-
-    .footer-btn    {
+    .footer-btn {
         padding: 10px 10px;
         font-size: 1.5em;
-        background: var(--text);
-        border-radius: 15px;
-        text-shadow: none;
-        border: 2px;
-        border-color: var(--box);
-        margin-top: 10px; 
+        margin-top: 10px;
         margin-left: 10px;
         width: 80%;
     }
-
     #footer-container {
         justify-content: center;
     }
 }
 
 @media screen and (max-width: 575px) {
-    
     .push {
         height: 0em;
     }
-
     .static-quote {
         font-size: 2em;
         font-weight: bolder;
     }
-
     #cocktail-name-main {
         font-weight: bolder;
         font-size: 2.25em;
     }
-
     .sidebar-heading {
         font-weight: bolder;
         font-size: 2.15em;
         margin-bottom: .5em;
     }
-
     .subheading {
         font-weight: bolder;
         font-size: 1.55em;
     }
-
     .sidebar-interactions {
         align-items: center;
         padding: 30px;
     }
-
     .column-container {
         align-items: center
     }
-
     #ingredients-list-div {
         padding-left: 70px;
         margin-bottom: 15px;
     }
-
-
     /* Button Styles */
     .recent-search-terms {
         font-weight: bolder;
         font-size: 1.5em;
     }
-
     #clear-btn {
         width: 100%;
         font-weight: bolder;
         padding: 12px 12px;
         border-radius: 15px;
     }
-
-
     /* Footer Styles */
-
     footer {
-        height: auto;  
-        margin: auto; 
-        text-align: center;  
+        height: auto;
+        margin: auto;
+        text-align: center;
         /* display: flex; */
     }
-
     footer h2 {
         font-weight: bold;
         font-size: 2em;
         color: var(--text);
     }
-
-
-    .footer-btn    {
-        padding: 10px 10px;
+    .footer-btn {
         justify-content: center;
-        font-size: 1.5em;
-        background: var(--text);
-        border-radius: 15px;
         text-shadow: none;
-        border: 2px;
         width: 80%;
-        margin-top: 10px; 
-        margin-left: 10px;
     }
-
     footer a {
         color: var(--box);
     }
-
     #footer-container {
         justify-content: center;
     }
 }
-
