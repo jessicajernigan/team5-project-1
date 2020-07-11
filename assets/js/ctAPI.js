@@ -15,11 +15,19 @@ var drinkDisplayed = searchInput;
 var errorDisplayContainer = document.getElementById("input-search");
 
 // fetch function that grabs response and returns the data assuming it is a drink in the API DB
-function fetchDrink() {
+function fetchDrink(e, drinkName) {
+    e.preventDefault();
+    console.log(searchInput.value);
+    console.log(e);
+    if (drinkName === undefined) {
+        drinkName = searchInput.value;
+    }
+    console.log(drinkName);
+    // console.log(event);
     var errorMsgDyn = document.getElementById("error-msg");
     $(errorMsgDyn).remove();
     responseDataArr = [];
-    var url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + searchInput.value;
+    var url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkName;
     // console.log(searchInput.value);
     // console.log(url);
     return fetch(url)
@@ -29,16 +37,20 @@ function fetchDrink() {
         .then(function(data) {
             responseData = data
             responseDataArr = data.drinks;
+            console.log(drinkName);
+            console.log(responseDataArr[0].strDrink);
             if (responseDataArr === null || responseDataArr === undefined) {
                 console.log("invalid entry");
                 invalidEntry();
-            } else if (toUpper(searchInput.value) !== responseDataArr[0].strDrink) {
+                console.log(drinkName);
+            } else if (toUpper(drinkName) !== responseDataArr[0].strDrink) {
                 console.log("does not exactly match");
                 invalidEntry();
             } else {
                 // $(errorMsg).remove();
                 console.log("valid entry");
                 appendFetchData();
+                getVideo();
             }
         });
     }

@@ -5,8 +5,8 @@ var drinksArray = JSON.parse(localStorage.getItem("drinks")) || [];
 var clearStoredDrinksEl = document.getElementById("clear-btn");
 
 // Function that forces upper case on first letter of displayed drink name - works for multiple word drinks
-function toUpper(drink) {
-  return drink
+function toUpper(drinkName) {
+  return drinkName
       .toLowerCase()
       .split(' ')
       .map(function(word) {
@@ -15,8 +15,9 @@ function toUpper(drink) {
       .join(' ');
    }
 
-function storeDrinkSearches(event) {
-  // event.preventDefault();
+function storeDrinkSearches() {
+  // debugger
+  // e.preventDefault()
   var searchTerm = toUpper(searchInput.value)
   hideQuoteShowContent();
   drinkDisplayed.innerHTML = searchTerm;
@@ -30,14 +31,14 @@ function storeDrinkSearches(event) {
     newBtn.setAttribute("value", searchTerm);
     newBtn.onclick = function(event) {
       event.preventDefault();
-      // console.log("first");
+      console.log("first");
       // var drink = event.target.textContent;
       var drink = $(this).attr("value");
       hideQuoteShowContent();
       searchInput.value = drink;
-      drinkDisplayed.innerHTML = drink;
-      fetchDrink(searchInput);
-      getVideoBtn(searchInput);
+      drinkDisplayed.innerText = drink;
+      fetchDrink(event, drink);
+      // getVideoBtn(searchInput);
       // console.log("Here's 'drink' when I click a button: ", drink);
     }
 
@@ -73,10 +74,11 @@ function displayStoredDrinks() {
       newBtn.onclick = function (event) {
         var drink = event.target.textContent;
         searchInput.value = drink;
-        // console.log("second");
+        console.log("second");
+        console.log(drink);
         // console.log(searchInput);
-        fetchDrink(searchInput);
-        getVideoBtn(searchInput);
+        fetchDrink(event, drink);
+        // getVideoBtn(searchInput);
         drinkDisplayed.innerHTML = toUpper(drink);
         hideQuoteShowContent();
         clearButtonDisplay();

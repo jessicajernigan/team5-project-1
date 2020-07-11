@@ -1,7 +1,6 @@
 // FUNCTIONS TO EMBED A YOUTUBE VIDEO - NEEDS TO BE LINKED TO THE SEARCH TERM
-var drinkInput = document.getElementById('drink-search');
+var searchInput = document.getElementById('drink-search');
 var drinkForm = document.querySelector(".entry");
-var drinkSearch = drinkInput.value;
 var videoContainer = document.getElementById("youtube");
 
 // Function to push input drink search
@@ -11,75 +10,82 @@ function pushDrink(e) {
 }
 
 // Function that takes in drink search and gets YouTube video
-function getVideo(drink = null) {
+function getVideo(drinkName) {
+  if (drinkName === undefined) {
+    drinkName = searchInput.value;
+  }
+  console.log(searchInput.value);
+  console.log(drinkName);
     videoContainer.style.display = "none";
     $(videoContainer).empty()
-    var drinkSearch = drinkInput.value;
     console.log("YOUTUBE API CALL");
-    $.ajax({
-      type: 'GET',
-      url: 'https://www.googleapis.com/youtube/v3/search',
-      data: {
-          key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
+    // $.ajax({
+    //   type: 'GET',
+    //   url: 'https://www.googleapis.com/youtube/v3/search',
+    //   data: {
+    //       key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
 
-          // q: "how to make the best " + typeof drink === "string" ? drink : drinkSearch + " cocktail", // "If 'drink' is a string, use it; if it's not, use 'drinkSearch' instead."
+    //       // q: "how to make the best " + typeof drink === "string" ? drink : drinkSearch + " cocktail", // "If 'drink' is a string, use it; if it's not, use 'drinkSearch' instead."
 
-          q: "how to make the best " + searchInput.value + " cocktail", // "If 'drink' is a string, use it; if it's not, use 'drinkSearch' instead."
+    //       q: "how to make the best " + drinkName + " cocktail", // "If 'drink' is a string, use it; if it's not, use 'drinkSearch' instead."
 
-          part: 'snippet',
-          maxResults: 1,
-          type: 'video',
-          videoEmbeddable: true,
-          allowFullScreen: true,
-      },
-      success: function(data){
-          embedVideo(data)
+    //       part: 'snippet',
+    //       maxResults: 1,
+    //       type: 'video',
+    //       videoEmbeddable: true,
+    //       allowFullScreen: true,
+    //   },
+    //   success: function(data){
+    //       embedVideo(data)
 
-        //   console.log(data);
+    //     //   console.log(data);
 
-      },
-      error: function(response){
-          console.log("Request Failed");
-      }
-    });
+    //   },
+    //   error: function(response){
+    //       console.log("Request Failed");
+    //   }
+    // });
   }
 
 // Function that takes in drink search BUTTON and gets YouTube video
-function getVideoBtn() {
+function getVideoBtn(drinkName) {
+  if (drinkName === undefined) {
+    drinkName = searchInput.value;
+  }
+  console.log(drinkName);
   videoContainer.style.display = "none";
   $(videoContainer).empty()
-  var drink = event.target.textContent;
   console.log("YOUTUBE API CALL");
 
   // console.log("This would have populated a " + drinkSearch + " video!")
 
   // console.log("This would have populated a " + drinkSearch + " video!")
 
-  $.ajax({
-    type: 'GET',
-    url: 'https://www.googleapis.com/youtube/v3/search',
-    data: {
+  // $.ajax({
+  //   type: 'GET',
+  //   url: 'https://www.googleapis.com/youtube/v3/search',
+  //   data: {
 
-        // key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
-        // q: "how to make the best " + drink + " cocktail",
+  //       // key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
+  //       // q: "how to make the best " + drink + " cocktail",
 
-        key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
-        q: "how to make the best " + searchInput.value + " cocktail",
+  //       key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
+  //       q: "how to make the best " + drinkName + " cocktail",
 
-        part: 'snippet',
-        maxResults: 1,
-        type: 'video',
-        videoEmbeddable: true,
-        allowFullScreen: true,
-    },
-    success: function(data){
-        embedVideo(data)
-      //   console.log(data);
-    },
-    error: function(response){
-        console.log("Request Failed");
-    }
-  });
+  //       part: 'snippet',
+  //       maxResults: 1,
+  //       type: 'video',
+  //       videoEmbeddable: true,
+  //       allowFullScreen: true,
+  //   },
+  //   success: function(data){
+  //       embedVideo(data)
+  //     //   console.log(data);
+  //   },
+  //   error: function(response){
+  //       console.log("Request Failed");
+  //   }
+  // });
 }
 
 // Function that embeds YouTube video
@@ -99,4 +105,4 @@ function embedVideo(data) {
 
 
 // EVENT LISTENERS
-drinkForm.addEventListener('submit', pushDrink);
+// drinkForm.addEventListener('submit', pushDrink);

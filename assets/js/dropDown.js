@@ -29,90 +29,80 @@ var clickLiquor = function() {
 
             drinkOne.onclick = function (event) {
             var drink = event.target.textContent;
-            searchInput.value = drink;
-            fetchDrink(searchInput);
-            getVideoBtn(searchInput);
+            fetchDrink(event, drink);
+            getVideoBtn(drink);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
               }
 
             drinkTwo.onclick = function (event) {
             var drink = event.target.textContent;
-            searchInput.value = drink;
-            fetchDrink(searchInput);
-            getVideoBtn(searchInput);
+            fetchDrink(event, drink);
+            getVideoBtn(drink);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
 
             drinkThree.onclick = function (event) {
             var drink = event.target.textContent;
-            searchInput.value = drink;
-            fetchDrink(searchInput);
-            getVideoBtn(searchInput);
+            fetchDrink(event, drink);
+            getVideoBtn(drink);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
 
             drinkFour.onclick = function (event) {
             var drink = event.target.textContent;
-            searchInput.value = drink;
-            fetchDrink(searchInput);
-            getVideoBtn(searchInput);
+            fetchDrink(event, drink);
+            getVideoBtn(drink);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
 
             drinkFive.onclick = function (event) {
             var drink = event.target.textContent;
-            searchInput.value = drink;
-            fetchDrink(searchInput);
-            getVideoBtn(searchInput);
+            fetchDrink(event, drink);
+            getVideoBtn(drink);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
 
             drinkSix.onclick = function (event) {
             var drink = event.target.textContent;
-            searchInput.value = drink;
-            fetchDrink(searchInput);
-            getVideoBtn(searchInput);
+            fetchDrink(event, drink);
+            getVideoBtn(drink);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
 
             drinkSeven.onclick = function (event) {
             var drink = event.target.textContent;
-            searchInput.value = drink;
-            fetchDrink(searchInput);
-            getVideoBtn(searchInput);
+            fetchDrink(event, drink);
+            getVideoBtn(drink);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
 
             drinkEight.onclick = function (event) {
             var drink = event.target.textContent;
-            searchInput.value = drink;
-            fetchDrink(searchInput);
-            getVideoBtn(searchInput);
+            fetchDrink(event, drink);
+            getVideoBtn(drink);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
 
             drinkNine.onclick = function (event) {
             var drink = event.target.textContent;
-            searchInput.value = drink;
-            fetchDrink(searchInput);
-            getVideoBtn(searchInput);
+            fetchDrink(event, drink);
+            getVideoBtn(drink);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
 
             drinkTen.onclick = function (event) {
             var drink = event.target.textContent;
-            searchInput.value = drink;
-            fetchDrink(searchInput);
-            getVideoBtn(searchInput);
+            fetchDrink(event, drink);
+            getVideoBtn(drink);
             drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
             }
