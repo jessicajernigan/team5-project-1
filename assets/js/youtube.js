@@ -52,30 +52,30 @@ function getVideoBtn() {
   console.log("YOUTUBE API CALL");
 
 // $.ajax({
-  //   type: 'GET',
-  //   url: 'https://www.googleapis.com/youtube/v3/search',
-  //   data: {
+//     type: 'GET',
+//     url: 'https://www.googleapis.com/youtube/v3/search',
+//     data: {
 
-  //       // key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
-  //       // q: "how to make the best " + drink + " cocktail",
+//         // key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
+//         // q: "how to make the best " + drink + " cocktail",
 
-  //       key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
-  //       q: "how to make the best " + searchInput.value + " cocktail",
+//         key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
+//         q: "how to make the best " + searchInput.value + " cocktail",
 
-  //       part: 'snippet',
-  //       maxResults: 1,
-  //       type: 'video',
-  //       videoEmbeddable: true,
-  //       allowFullScreen: true,
-  //   },
-  //   success: function(data){
-  //       embedVideo(data)
-  //     //   console.log(data);
-  //   },
-  //   error: function(response){
-  //       console.log("Request Failed");
-  //   }
-  // });
+//         part: 'snippet',
+//         maxResults: 1,
+//         type: 'video',
+//         videoEmbeddable: true,
+//         allowFullScreen: true,
+//     },
+//     success: function(data){
+//         embedVideo(data)
+//       //   console.log(data);
+//     },
+//     error: function(response){
+//         console.log("Request Failed");
+//     }
+//   });
 }
 
 // Function that embeds YouTube video

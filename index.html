@@ -12,7 +12,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 
-<body id="hero-img" class="hero-img" onload="document.body.style.opacity='1'">
+<body class="hero-img" onload="document.body.style.opacity='1'">
     <!-- Header begins -->
     <header>
         <div>
@@ -46,21 +46,21 @@
                 </form>
 
                 <!-- Previous Searches Dynamically Generated Here -->
-                <div id="previous-searches" class="previous-searches"></div>
+                <div id="previous-searches"></div>
                 <!-- 'Clear' Button -->
                 <button class="btn" id="clear-btn">Clear Recent Searches</button>
             </div>
 
-            <div id="dropdown-div" class="column-container dropdown sidebar-interactions">
+            <div class="column-container dropdown sidebar-interactions">
                 <h3 class="sidebar-heading centertext">Not sure where to&nbsp;start?</h3>
                 <p>Choose a base liquor to view BarKeep's top suggestions!</p>
                 <select id="drop-list">
                     <option value="choose">Choose your base liquor</option>
-                    <option id="tequila" class="liquor" value="tequila">Tequila</option>
-                    <option id="bourbon" class="liquor" value="bourbon">Bourbon</option>
-                    <option id="gin" class="liquor" value="gin">Gin</option>
-                    <option id="rum" class="liquor" value="rum">Rum</option>
-                    <option id="vodka" class="liquor" value="vodka">Vodka</option>
+                    <option value="tequila">Tequila</option>
+                    <option value="bourbon">Bourbon</option>
+                    <option value="gin">Gin</option>
+                    <option value="rum">Rum</option>
+                    <option value="vodka">Vodka</option>
                 </select>
 
                 <!-- Drink Suggestions Dynamically Generated Here -->
@@ -73,7 +73,7 @@
 
         <div class="large-8 large-center columns">
             <!-- Begin Central Cocktail Recipe Container -->
-            <section id="ingredients-block" class="column-container">
+            <section class="column-container">
                 <div id="dynamic-content-block">
                     <div class="recipe-content-h2">
                         <h2 id="cocktail-name-main" class="centertext"></h2>
