@@ -20,7 +20,7 @@ function getVideo(drink = null) {
       type: 'GET',
       url: 'https://www.googleapis.com/youtube/v3/search',
       data: {
-          key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
+          key: 'AIzaSyCwb1cWof_bTtytUuCwABzIn0y2tu3GHLM',
 
           // q: "how to make the best " + typeof drink === "string" ? drink : drinkSearch + " cocktail", // "If 'drink' is a string, use it; if it's not, use 'drinkSearch' instead."
 
@@ -60,7 +60,7 @@ $.ajax({
         // key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
         // q: "how to make the best " + drink + " cocktail",
 
-        key: 'AIzaSyD4-o_Z0ZCDzl4kzTrKCjueFjiMqFk7Cdc',
+        key: 'AIzaSyCwb1cWof_bTtytUuCwABzIn0y2tu3GHLM',
         q: "how to make the best " + searchInput.value + " cocktail",
 
         part: 'snippet',
