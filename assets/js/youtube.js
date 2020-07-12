@@ -14,11 +14,10 @@ function getVideo(drinkName) {
   if (drinkName === undefined) {
     drinkName = searchInput.value;
   }
-  console.log(searchInput.value);
   console.log(drinkName);
     videoContainer.style.display = "none";
     $(videoContainer).empty()
-    console.log("YOUTUBE API CALL");
+    console.log("YOUTUBE API CALL FOR: " + drinkName);
     // $.ajax({
     //   type: 'GET',
     //   url: 'https://www.googleapis.com/youtube/v3/search',

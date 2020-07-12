@@ -17,8 +17,8 @@ var errorDisplayContainer = document.getElementById("input-search");
 // fetch function that grabs response and returns the data assuming it is a drink in the API DB
 function fetchDrink(e, drinkName) {
     e.preventDefault();
-    console.log(searchInput.value);
-    console.log(e);
+    // console.log(searchInput.value);
+    // console.log(e);
     if (drinkName === undefined) {
         drinkName = searchInput.value;
     }
@@ -37,20 +37,21 @@ function fetchDrink(e, drinkName) {
         .then(function(data) {
             responseData = data
             responseDataArr = data.drinks;
-            console.log(drinkName);
-            console.log(responseDataArr[0].strDrink);
+            // console.log(drinkName);
+            // console.log(responseDataArr[0].strDrink);
             if (responseDataArr === null || responseDataArr === undefined) {
                 console.log("invalid entry");
                 invalidEntry();
-                console.log(drinkName);
+                // console.log(drinkName);
             } else if (toUpper(drinkName) !== responseDataArr[0].strDrink) {
                 console.log("does not exactly match");
                 invalidEntry();
             } else {
                 // $(errorMsg).remove();
                 console.log("valid entry");
+                console.log(drinkName);
                 appendFetchData();
-                getVideo();
+                getVideo(toUpper(drinkName));
             }
         });
     }

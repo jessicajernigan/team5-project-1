@@ -18,9 +18,11 @@ function toUpper(drinkName) {
 function storeDrinkSearches() {
   // debugger
   // e.preventDefault()
-  var searchTerm = toUpper(searchInput.value)
+  var searchTerm = searchInput.value;
   hideQuoteShowContent();
-  drinkDisplayed.innerHTML = searchTerm;
+  console.log(searchInput.value);
+  // console.log(drinkName);
+  drinkDisplayed.innerHTML = toUpper(searchInput.value);
   if (drinksArray.indexOf(searchTerm) === -1) {
     drinksArray.push(searchTerm);
     localStorage.setItem("drinks", JSON.stringify(drinksArray));

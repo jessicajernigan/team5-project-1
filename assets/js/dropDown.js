@@ -1,7 +1,11 @@
 var liquorSearchList = document.getElementById("liquor-search-list");
+var searchInput = document.getElementById("drink-search");
 var dropList = document.getElementById("drop-list");
 
-var clickLiquor = function() {
+var clickLiquor = function(drinkName) {
+  if (drinkName === undefined) {
+    drinkName = event.target.textContent
+  }
     var url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + dropList.value;
     $(liquorSearchList).empty();
     fetch(url)
@@ -27,11 +31,13 @@ var clickLiquor = function() {
             var drinkNine = document.createElement("button");
             var drinkTen = document.createElement("button");
 
-            drinkOne.onclick = function (event) {
+            drinkOne.onclick = function (event, drinkName) {
+              // event.preventDefault();
+              drinkName = event.target.textContent;
             var drink = event.target.textContent;
-            fetchDrink(event, drink);
-            getVideoBtn(drink);
-            drinkDisplayed.innerHTML = toUpper(drink);
+            console.log(drinkName);
+            fetchDrink(event, drinkName);
+            // drinkDisplayed.innerHTML = toUpper(drink);
             clearButtonDisplay();
               }
 
