@@ -57,7 +57,7 @@ $.ajax({
     url: 'https://www.googleapis.com/youtube/v3/search',
     data: {
 
-        // key: 'AIzaSyCwb1cWof_bTtytUuCwABzIn0y2tu3GHLM',
+        // key: 'apiKey',
         // q: "how to make the best " + drink + " cocktail",
 
         key: apiKey,
