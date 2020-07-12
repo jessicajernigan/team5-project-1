@@ -51,6 +51,7 @@ function getVideoBtn() {
   var drink = event.target.textContent;
   console.log("YOUTUBE API CALL");
 
+
 $.ajax({
     type: 'GET',
     url: 'https://www.googleapis.com/youtube/v3/search',
@@ -76,6 +77,7 @@ $.ajax({
         console.log("Request Failed");
     }
   });
+
 }
 
 // Function that embeds YouTube video
